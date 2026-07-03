@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlacementHub — Beyond Placements. Building Industry-Ready Talent</title>
+  <meta name="description" content="PlacementHub connects students, institutions, employers, mentors, alumni, and industry experts in one year-round campus placement ecosystem." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-50: #EEF2FF;
+      --primary-200: #C7D2FE;
+      --primary-500: #6366F1;
+      --primary-600: #4F46E5;
+      --primary-700: #4338CA;
+      --primary-900: #312E81;
+      --success-50: #ECFDF5;
+      --success-600: #059669;
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F9FAFB;
+      --text-primary: #111827;
+      --text-secondary: #374151;
+      --border-default: rgba(0, 0, 0, 0.08);
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-2xl: 1.25rem;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 40px rgba(15, 23, 42, 0.12);
+      --font-sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.15s ease-out, border-color 0.15s ease-out;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+      color: #fff;
+      border: none;
+    }
+    .btn-primary:hover { filter: brightness(1.05); }
+    .btn-secondary {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      border-color: var(--border-default);
+    }
+    .btn-secondary:hover { background: var(--bg-secondary); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border-default);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      line-height: 0;
+    }
+    .brand-logo {
+      height: 5.75rem;
+      width: auto;
+      max-width: min(480px, 70vw);
+      object-fit: contain;
+      object-position: left center;
+      display: block;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #000;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .nav-links a:hover { color: #000; text-decoration: underline; }
+
+    .hero {
+      padding: 6rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      background: radial-gradient(ellipse at top, var(--primary-50) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-inner {
+      max-width: 48rem;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 9999px;
+      border: 1px solid var(--primary-200);
+      background: var(--primary-50);
+      color: var(--primary-700);
+      padding: 0.375rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin: 0 0 1.5rem;
+      line-height: 1.12;
+    }
+    .hero h1 .accent { color: var(--primary-600); }
+    .hero-lead {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 44rem;
+      margin: 0 auto 2.5rem;
+      line-height: 1.65;
+    }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .hero-actions .btn { padding: 0.875rem 2rem; font-size: 1.125rem; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 5rem auto 0;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border-default);
+    }
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+    .stat-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .section {
+      padding: 5rem 1.5rem;
+    }
+    .section-muted {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-default);
+    }
+    .section-bordered {
+      border-top: 1px solid var(--border-default);
+      border-bottom: 1px solid var(--border-default);
+    }
+    .section-narrow { max-width: 52rem; margin: 0 auto; }
+    .section-wide { max-width: 1200px; margin: 0 auto; }
+    .section h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin: 0 0 1.5rem;
+      text-align: center;
+    }
+    .section h2 .accent { color: var(--primary-600); }
+    .prose {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      display: grid;
+      gap: 1.25rem;
+    }
+    .prose p { margin: 0; }
+    .prose strong { color: var(--text-primary); }
+
+    .stakeholder-grid {
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    .stakeholder-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-default);
+      background: var(--bg-primary);
+      padding: 1.25rem 1.35rem;
+    }
+    .stakeholder-card .label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+    }
+    .stakeholder-card .icon {
+      color: var(--primary-600);
+      font-size: 1.1rem;
+    }
+    .stakeholder-card p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .vision-close {
+      margin: 2.5rem 0 0;
+      text-align: center;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+    .vision-close .accent { color: var(--primary-600); }
+
+    .chart-section {
+      padding: 4rem 1.5rem 5rem;
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border-default);
+    }
+    .chart-intro {
+      text-align: center;
+      max-width: 42rem;
+      margin: 0 auto 2rem;
+    }
+    .chart-intro p {
+      margin: 0;
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .chart-frame {
+      max-width: 960px;
+      margin: 0 auto;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-default);
+      background: var(--bg-secondary);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .chart-frame img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+    }
+    .chart-caption {
+      margin: 1rem 0 0;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .features-intro {
+      text-align: center;
+      max-width: 42rem;
+      margin: 0 auto 4rem;
+    }
+    .features-intro p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-default);
+      background: var(--bg-primary);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .feature-icon {
+      margin-bottom: 1.25rem;
+      display: inline-flex;
+      height: 3.5rem;
+      width: 3.5rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      background: var(--primary-50);
+      color: var(--primary-600);
+      font-size: 1.5rem;
+    }
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 0 0.75rem;
+    }
+    .feature-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .contact-wrap {
+      padding: 6rem 1.5rem;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-default);
+    }
+    .contact-card {
+      max-width: 32rem;
+      margin: 0 auto;
+      border-radius: var(--radius-2xl);
+      border: 1px solid var(--border-default);
+      background: var(--bg-primary);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-card h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      text-align: center;
+    }
+    .contact-card > .lead {
+      margin: 0 0 1.75rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .contact-form {
+      display: grid;
+      gap: 1rem;
+    }
+    .contact-form label {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--border-default);
+      border-radius: 0.5rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid var(--primary-200);
+      outline-offset: 1px;
+      border-color: var(--primary-500);
+    }
+    .contact-form textarea { min-height: 7rem; resize: vertical; }
+    .contact-form .btn {
+      margin-top: 0.25rem;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+    }
+    .contact-confirm {
+      display: none;
+      text-align: center;
+      padding: 1.5rem 0.5rem;
+    }
+    .contact-confirm.is-visible { display: block; }
+    .contact-form.is-hidden { display: none; }
+    .contact-confirm .check {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 9999px;
+      background: var(--success-50);
+      color: var(--success-600);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .contact-confirm h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    .contact-confirm p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .site-footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-default);
+      padding: 3rem 1.5rem;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
+    .footer-brand .mark {
+      display: flex;
+      height: 1.5rem;
+      width: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.375rem;
+      background: var(--primary-600);
+      color: #fff;
+      font-size: 0.75rem;
+    }
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .footer-nav a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+    .footer-nav a:hover { color: var(--primary-600); }
+    .footer-copy {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin: 0;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 3.5rem 1.25rem 2.5rem; }
+      .section { padding: 3.5rem 1.25rem; }
+      .chart-section { padding: 2.5rem 1.25rem 3.5rem; }
+      .contact-wrap { padding: 3.5rem 1.25rem; }
+      .contact-card { padding: 1.75rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="PlacementHub home">
+        <img class="brand-logo" src="images/logo.png" alt="PlacementHub" width="480" height="92" />
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="pill">✦ More than a placement platform</div>
+        <h1>
+          Beyond Placements.<br />
+          <span class="accent">Building Industry-Ready Talent</span>
+        </h1>
+        <p class="hero-lead">
+          Placements are an <strong>outcome—not the objective</strong>.
+          PlacementHub connects students, institutions, employers, mentors, alumni, and industry experts in one
+          year-round ecosystem—not just recruitment season.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#features">Explore Features</a>
+        </div>
+      </div>
+
+      <div class="stats" aria-label="Platform highlights">
+        <div>
+          <div class="stat-value" style="color: var(--primary-600)">500+</div>
+          <div class="stat-label">Colleges</div>
+        </div>
+        <div>
+          <div class="stat-value" style="color: #0EA5E9">10K+</div>
+          <div class="stat-label">Students Placed</div>
+        </div>
+        <div>
+          <div class="stat-value" style="color: var(--primary-600)">200+</div>
+          <div class="stat-label">Employers</div>
+        </div>
+        <div>
+          <div class="stat-value" style="color: #10B981">₹12L</div>
+          <div class="stat-label">Avg. Package</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-muted">
+      <div class="section-narrow">
+        <h2>More Than a Placement Platform</h2>
+        <div class="prose">
+          <p>
+            PlacementHub goes beyond managing campus placements. We believe
+            <strong>placements are an outcome—not the objective</strong>.
+            The real objective is to build <strong>industry-ready graduates</strong> through continuous collaboration between
+            <strong>students, institutions, employers, mentors, alumni, training partners, and industry experts</strong>.
+          </p>
+          <p>
+            PlacementHub creates a connected ecosystem where academia and industry engage throughout the student journey—not
+            just during the recruitment season. By bringing all stakeholders onto a single platform, we enable meaningful
+            interactions, experiential learning, mentoring, internships, skill development, industry projects, hackathons,
+            assessments, and career guidance that prepare students for the workplace.
+          </p>
+          <p>
+            Our vision is to transform placements from a seasonal activity into a
+            <strong>year-round ecosystem</strong> that strengthens employability,
+            fosters innovation, and bridges the gap between education and industry.
+          </p>
+        </div>
+
+        <div class="stakeholder-grid">
+          <article class="stakeholder-card">
+            <div class="label"><span class="icon" aria-hidden="true">◎</span> Students &amp; alumni</div>
+            <p>Profiles, skills, applications, mentorship</p>
+          </article>
+          <article class="stakeholder-card">
+            <div class="label"><span class="icon" aria-hidden="true">▣</span> Institutions</div>
+            <p>Rules, calendars, verification, reporting</p>
+          </article>
+          <article class="stakeholder-card">
+            <div class="label"><span class="icon" aria-hidden="true">⌂</span> Employers &amp; partners</div>
+            <p>Drives, internships, projects, offers</p>
+          </article>
+          <article class="stakeholder-card">
+            <div class="label"><span class="icon" aria-hidden="true">⇄</span> Mentors &amp; experts</div>
+            <p>Guidance beyond the placement window</p>
+          </article>
+        </div>
+
+        <p class="vision-close">
+          PlacementHub isn’t just about managing placements.
+          <span class="accent">It’s about building the future workforce.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="chart-section" aria-labelledby="chart-heading">
+      <div class="chart-intro">
+        <h2 id="chart-heading">The PlacementHub Ecosystem</h2>
+        <p>
+          One connected view of how students, colleges, employers, and mentors work together across the full talent journey.
+        </p>
+      </div>
+      <figure class="chart-frame">
+        <img
+          src="images/chart.png"
+          alt="PlacementHub ecosystem diagram showing how students, institutions, employers, and mentors connect on the platform"
+          width="960"
+          height="540"
+          loading="lazy"
+        />
+        <figcaption class="chart-caption">Year-round collaboration—not only recruitment season.</figcaption>
+      </figure>
+    </section>
+
+    <section id="features" class="section section-bordered">
+      <div class="section-wide">
+        <div class="features-intro">
+          <h2>One Platform for the <span class="accent">Full Journey</span></h2>
+          <p>
+            From internships and hackathons to drives and offers—every program runs on shared profiles, college policy, and real-time visibility.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🎓</div>
+            <h3>Student Portal</h3>
+            <p>Complete profile management, resume builder, skill tracking, document uploads, and one-click applications.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🏢</div>
+            <h3>Employer Dashboard</h3>
+            <p>Post jobs, set eligibility criteria, schedule drives, manage hiring pipelines, and publish offers.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🏫</div>
+            <h3>College Management</h3>
+            <p>Verify students, configure placement rules, manage calendars, approve employers, and generate reports.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📊</div>
+            <h3>Real-time Analytics</h3>
+            <p>Placement rates, salary trends, department-wise stats, employer reliability scores, and year-over-year comparisons.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📅</div>
+            <h3>Smart Scheduling</h3>
+            <p>Calendar integration, conflict detection, academic blocking, buffer days, and facility booking.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🛡️</div>
+            <h3>Multi-Tenant &amp; Secure</h3>
+            <p>Complete data isolation, role-based access, audit logs, and enterprise-grade security for every college.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-wrap">
+      <div class="contact-card">
+        <h2>Contact Us</h2>
+        <p class="lead">Tell us a little about your college or organisation. We’ll get back to you.</p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required placeholder="you@college.edu" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" required placeholder="How can we help?"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+
+        <div id="contact-confirm" class="contact-confirm" role="status" aria-live="polite">
+          <div class="check" aria-hidden="true">✓</div>
+          <h3>Thank you</h3>
+          <p>Your message has been received. We’ll be in touch shortly.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="mark" aria-hidden="true">P</span>
+        PlacementHub
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+      <p class="footer-copy">© 2026 PlacementHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      var confirm = document.getElementById('contact-confirm');
+      if (!form || !confirm) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        form.classList.add('is-hidden');
+        confirm.classList.add('is-visible');
+      });
+    })();
+  </script>
+</body>
+</html>
