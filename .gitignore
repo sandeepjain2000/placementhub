@@ -1,0 +1,5 @@
+# Deck build tooling (keep generated PPTX)
+decks/build-docker-kimi.js
+decks/node_modules/
+decks/package.json
+decks/package-lock.json
