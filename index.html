@@ -359,6 +359,99 @@
       line-height: 1.6;
     }
 
+    .resources-intro {
+      text-align: center;
+      max-width: 42rem;
+      margin: 0 auto 3rem;
+    }
+    .resources-intro p {
+      margin: 0;
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+    }
+    .resource-list {
+      display: grid;
+      gap: 1.25rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .resource-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      padding: 1.35rem 1.5rem;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-default);
+      background: var(--bg-primary);
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    }
+    .resource-item:hover {
+      border-color: var(--primary-200);
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
+    }
+    .resource-info {
+      flex: 1;
+      min-width: 220px;
+    }
+    .resource-type {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--primary-700);
+      background: var(--primary-50);
+      border: 1px solid var(--primary-200);
+      border-radius: 9999px;
+      padding: 0.2rem 0.65rem;
+      margin-bottom: 0.65rem;
+    }
+    .resource-item h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+    }
+    .resource-item .resource-desc {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .resource-meta {
+      margin-top: 0.65rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+    .resource-meta .downloads {
+      color: var(--primary-700);
+    }
+    .resource-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+    }
+    .resource-actions .btn {
+      padding: 0.7rem 1.25rem;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+    .resource-actions .btn svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
     .contact-wrap {
       padding: 6rem 1.5rem;
       background: var(--bg-secondary);
@@ -520,6 +613,7 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="#features">Features</a>
           <a href="#about">About</a>
+          <a href="#resources">Resources</a>
           <a href="#contact">Contact Us</a>
         </nav>
       </div>
@@ -677,6 +771,107 @@
       </div>
     </section>
 
+    <section id="resources" class="section section-muted" aria-labelledby="resources-heading">
+      <div class="section-wide">
+        <div class="resources-intro">
+          <h2 id="resources-heading">Resources</h2>
+          <p>
+            Download presentation decks on cybersecurity careers, security tools, and project management—
+            free materials for students, colleges, and partners.
+          </p>
+        </div>
+
+        <div class="resource-list">
+          <article class="resource-item" data-resource-id="security-tools-overview">
+            <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
+              <h3>Comprehensive Security Tools Overview</h3>
+              <p class="resource-desc">
+                A walkthrough of essential security tools across the modern cybersecurity stack.
+              </p>
+              <div class="resource-meta">
+                <span>9.4 MB</span>
+                <span class="downloads" data-download-count>—</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <a
+                class="btn btn-primary js-download"
+                href="decks/Comprehensive%20Security%20Tools%20Overview.pptx"
+                download="Comprehensive Security Tools Overview.pptx"
+                data-file-id="security-tools-overview"
+                data-file-name="Comprehensive Security Tools Overview.pptx"
+                data-file-title="Comprehensive Security Tools Overview"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item" data-resource-id="cybersecurity-career">
+            <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
+              <h3>From Classroom to Cybersecurity Career</h3>
+              <p class="resource-desc">
+                Guidance for students moving from academic learning into cybersecurity roles.
+              </p>
+              <div class="resource-meta">
+                <span>2.1 MB</span>
+                <span class="downloads" data-download-count>—</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <a
+                class="btn btn-primary js-download"
+                href="decks/From-Classroom-to-Cybersecurity-CareerV2.pptx"
+                download="From-Classroom-to-Cybersecurity-CareerV2.pptx"
+                data-file-id="cybersecurity-career"
+                data-file-name="From-Classroom-to-Cybersecurity-CareerV2.pptx"
+                data-file-title="From Classroom to Cybersecurity Career"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item" data-resource-id="project-management">
+            <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
+              <h3>Project Management Fundamentals</h3>
+              <p class="resource-desc">
+                Core project management concepts for campus programs and industry-ready teams.
+              </p>
+              <div class="resource-meta">
+                <span>3.2 MB</span>
+                <span class="downloads" data-download-count>—</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <a
+                class="btn btn-primary js-download"
+                href="decks/Project%20Management%20Fundamentals.pptx"
+                download="Project Management Fundamentals.pptx"
+                data-file-id="project-management"
+                data-file-name="Project Management Fundamentals.pptx"
+                data-file-title="Project Management Fundamentals"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="contact-wrap">
       <div class="contact-card">
         <h2>Contact Us</h2>
@@ -716,6 +911,7 @@
       <nav class="footer-nav" aria-label="Footer">
         <a href="#features">Features</a>
         <a href="#about">About</a>
+        <a href="#resources">Resources</a>
         <a href="#contact">Contact Us</a>
       </nav>
       <p class="footer-copy">© 2026 PlacementHub. All rights reserved.</p>
@@ -726,12 +922,120 @@
     (function () {
       var form = document.getElementById('contact-form');
       var confirm = document.getElementById('contact-confirm');
-      if (!form || !confirm) return;
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        form.classList.add('is-hidden');
-        confirm.classList.add('is-visible');
+      if (form && confirm) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          form.classList.add('is-hidden');
+          confirm.classList.add('is-visible');
+        });
+      }
+    })();
+
+    (function () {
+      var COUNTER_NS = 'placementhub-resources';
+      var COUNTER_BASE = 'https://api.counterapi.dev/v1/' + COUNTER_NS + '/';
+      var LOG_KEY = 'ph_download_log';
+
+      function formatCount(n) {
+        var num = Number(n) || 0;
+        if (num === 1) return '1 download';
+        return num.toLocaleString() + ' downloads';
+      }
+
+      function setCountLabel(item, count) {
+        var el = item.querySelector('[data-download-count]');
+        if (el) el.textContent = formatCount(count);
+      }
+
+      function loadCount(fileId, item) {
+        fetch(COUNTER_BASE + encodeURIComponent(fileId) + '/', { method: 'GET', mode: 'cors' })
+          .then(function (res) { return res.ok ? res.json() : null; })
+          .then(function (data) {
+            if (data && typeof data.count === 'number') setCountLabel(item, data.count);
+            else setCountLabel(item, 0);
+          })
+          .catch(function () {
+            setCountLabel(item, 0);
+          });
+      }
+
+      function bumpCount(fileId, item) {
+        fetch(COUNTER_BASE + encodeURIComponent(fileId) + '/up', { method: 'GET', mode: 'cors' })
+          .then(function (res) { return res.ok ? res.json() : null; })
+          .then(function (data) {
+            if (data && typeof data.count === 'number') setCountLabel(item, data.count);
+          })
+          .catch(function () { /* keep existing label */ });
+      }
+
+      function appendLocalLog(entry) {
+        try {
+          var log = JSON.parse(localStorage.getItem(LOG_KEY) || '[]');
+          if (!Array.isArray(log)) log = [];
+          log.push(entry);
+          if (log.length > 200) log = log.slice(-200);
+          localStorage.setItem(LOG_KEY, JSON.stringify(log));
+        } catch (err) { /* ignore quota / private mode */ }
+      }
+
+      function trackAnalytics(fileId, fileName, fileTitle) {
+        var payload = {
+          event: 'file_download',
+          file_id: fileId,
+          file_name: fileName,
+          file_title: fileTitle,
+          file_extension: 'pptx'
+        };
+
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'file_download', {
+            file_id: fileId,
+            file_name: fileName,
+            file_extension: 'pptx',
+            link_text: fileTitle,
+            link_url: location.origin + location.pathname.replace(/\/?$/, '/') + 'decks/' + encodeURIComponent(fileName)
+          });
+        }
+
+        if (Array.isArray(window.dataLayer)) {
+          window.dataLayer.push(payload);
+        }
+
+        appendLocalLog({
+          ts: new Date().toISOString(),
+          fileId: fileId,
+          fileName: fileName,
+          title: fileTitle,
+          path: location.pathname,
+          referrer: document.referrer || null,
+          ua: navigator.userAgent
+        });
+      }
+
+      document.querySelectorAll('.resource-item[data-resource-id]').forEach(function (item) {
+        loadCount(item.getAttribute('data-resource-id'), item);
       });
+
+      document.querySelectorAll('a.js-download').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var fileId = link.getAttribute('data-file-id');
+          var fileName = link.getAttribute('data-file-name');
+          var fileTitle = link.getAttribute('data-file-title');
+          var item = link.closest('.resource-item');
+          if (!fileId) return;
+          bumpCount(fileId, item);
+          trackAnalytics(fileId, fileName, fileTitle);
+        });
+      });
+
+      // Inspect recent downloads in the browser console: placementHubDownloads()
+      window.placementHubDownloads = function () {
+        try {
+          return JSON.parse(localStorage.getItem(LOG_KEY) || '[]');
+        } catch (err) {
+          return [];
+        }
+      };
     })();
   </script>
 </body>
