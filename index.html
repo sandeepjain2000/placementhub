@@ -1048,26 +1048,15 @@
     })();
 
     (function () {
-      // Shared public counts + local cache (CounterAPI alone is flaky on reads)
-      var COUNTER_NS = 'phub-v3';
-      var COUNTER_BASE = 'https://api.counterapi.dev/v1/' + COUNTER_NS + '/';
-      var CACHE_KEY = 'ph_dl_counts_v3';
+      // Shared remote counters (visible across browsers). Abacus is a free CountAPI-style service.
+      var NS = 'placementhub.online';
+      var API = 'https://abacus.jasoncameron.dev';
       var LOG_KEY = 'ph_download_log';
-      var counts = readCache();
+      var POLL_MS = 45000;
 
-      function readCache() {
-        try {
-          var raw = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}');
-          return raw && typeof raw === 'object' ? raw : {};
-        } catch (err) {
-          return {};
-        }
-      }
-
-      function writeCache() {
-        try {
-          localStorage.setItem(CACHE_KEY, JSON.stringify(counts));
-        } catch (err) { /* ignore */ }
+      // Versioned keys so old/test counts don't leak into the UI
+      function keyFor(fileId) {
+        return 'v1-' + fileId;
       }
 
       function formatCount(n) {
@@ -1081,58 +1070,61 @@
         if (el) el.textContent = formatCount(count);
       }
 
-      function parseCount(data) {
-        return data && typeof data.count === 'number' ? data.count : null;
-      }
-
-      function showCached(fileId, item) {
-        var n = typeof counts[fileId] === 'number' ? counts[fileId] : 0;
-        setCountLabel(item, n);
+      function parseValue(data) {
+        return data && typeof data.value === 'number' ? data.value : null;
       }
 
       function loadCount(fileId, item) {
-        showCached(fileId, item);
-        fetch(COUNTER_BASE + encodeURIComponent(fileId) + '/', {
+        fetch(API + '/get/' + encodeURIComponent(NS) + '/' + encodeURIComponent(keyFor(fileId)), {
+          method: 'GET',
+          mode: 'cors',
+          cache: 'no-store'
+        })
+          .then(function (res) {
+            if (res.status === 404) return { value: 0 };
+            return res.ok ? res.json() : null;
+          })
+          .then(function (data) {
+            var n = parseValue(data);
+            setCountLabel(item, n === null ? 0 : n);
+          })
+          .catch(function () {
+            setCountLabel(item, 0);
+          });
+      }
+
+      function refreshAllCounts() {
+        document.querySelectorAll('.resource-item[data-resource-id]').forEach(function (item) {
+          loadCount(item.getAttribute('data-resource-id'), item);
+        });
+      }
+
+      function startDownload(href, fileName) {
+        var a = document.createElement('a');
+        a.href = href;
+        a.setAttribute('download', fileName || '');
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }
+
+      function bumpAndDownload(fileId, item, href, fileName) {
+        // Count first on the shared API, then download — so every browser sees the same total
+        fetch(API + '/hit/' + encodeURIComponent(NS) + '/' + encodeURIComponent(keyFor(fileId)), {
           method: 'GET',
           mode: 'cors',
           cache: 'no-store'
         })
           .then(function (res) { return res.ok ? res.json() : null; })
           .then(function (data) {
-            var remote = parseCount(data);
-            if (remote === null) return;
-            var local = typeof counts[fileId] === 'number' ? counts[fileId] : 0;
-            // Keep the higher value so a failed /up still matches what the user saw
-            var best = Math.max(remote, local);
-            counts[fileId] = best;
-            writeCache();
-            setCountLabel(item, best);
+            var n = parseValue(data);
+            if (n !== null) setCountLabel(item, n);
           })
-          .catch(function () { /* keep cached label */ });
-      }
-
-      function bumpRemote(fileId) {
-        var url = COUNTER_BASE + encodeURIComponent(fileId) + '/up?_=' + Date.now();
-        // keepalive helps if the browser is busy starting the download
-        fetch(url, { method: 'GET', mode: 'cors', cache: 'no-store', keepalive: true })
-          .then(function (res) { return res.ok ? res.json() : null; })
-          .then(function (data) {
-            var n = parseCount(data);
-            if (n === null) return;
-            counts[fileId] = Math.max(counts[fileId] || 0, n);
-            writeCache();
-            var item = document.querySelector('.resource-item[data-resource-id="' + fileId + '"]');
-            if (item) setCountLabel(item, counts[fileId]);
-          })
-          .catch(function () { /* cached optimistic count remains */ });
-      }
-
-      function bumpCount(fileId, item) {
-        var next = (typeof counts[fileId] === 'number' ? counts[fileId] : 0) + 1;
-        counts[fileId] = next;
-        writeCache();
-        setCountLabel(item, next);
-        bumpRemote(fileId);
+          .catch(function () { /* download still proceeds */ })
+          .finally(function () {
+            startDownload(href, fileName);
+          });
       }
 
       function appendLocalLog(entry) {
@@ -1176,30 +1168,27 @@
         });
       }
 
-      document.querySelectorAll('.resource-item[data-resource-id]').forEach(function (item) {
-        loadCount(item.getAttribute('data-resource-id'), item);
-      });
+      refreshAllCounts();
+      setInterval(refreshAllCounts, POLL_MS);
 
       document.querySelectorAll('a.js-download').forEach(function (link) {
-        link.addEventListener('click', function () {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
           var fileId = link.getAttribute('data-file-id');
           var fileName = link.getAttribute('data-file-name');
           var fileTitle = link.getAttribute('data-file-title');
           var item = link.closest('.resource-item');
           if (!fileId || !item) return;
-          bumpCount(fileId, item);
           trackAnalytics(fileId, fileName, fileTitle, link.href);
+          bumpAndDownload(fileId, item, link.href, fileName);
         });
       });
 
       window.placementHubDownloads = function () {
         try {
-          return {
-            counts: JSON.parse(localStorage.getItem(CACHE_KEY) || '{}'),
-            log: JSON.parse(localStorage.getItem(LOG_KEY) || '[]')
-          };
+          return JSON.parse(localStorage.getItem(LOG_KEY) || '[]');
         } catch (err) {
-          return { counts: {}, log: [] };
+          return [];
         }
       };
     })();
