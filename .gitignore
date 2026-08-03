@@ -3,3 +3,6 @@ decks/build-docker-kimi.js
 decks/node_modules/
 decks/package.json
 decks/package-lock.json
+
+# Large template archive — not a site resource
+decks/graphicriver-Ol8JT3TB-motagua-multipurpose-powerpoint-template.zip

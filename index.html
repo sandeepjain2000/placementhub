@@ -776,14 +776,15 @@
         <div class="resources-intro">
           <h2 id="resources-heading">Resources</h2>
           <p>
-            Download presentation decks on cybersecurity careers, security tools, Docker,
-            and project management—free materials for students, colleges, and partners.
+            Download presentation decks and handbooks on cybersecurity, DevOps, Git,
+            monitoring, and project management—free materials for students, colleges, and partners.
           </p>
         </div>
 
         <div class="resource-list">
           <article class="resource-item" data-resource-id="docker-containerization">
             <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
               <h3>Mastering Docker &amp; Containerization</h3>
               <p class="resource-desc">
                 Build, ship, and run distributed applications anywhere with speed, predictability, and efficiency.
@@ -809,8 +810,37 @@
             </div>
           </article>
 
+          <article class="resource-item" data-resource-id="mastering-git">
+            <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
+              <h3>Mastering Git</h3>
+              <p class="resource-desc">
+                A comprehensive guide to version control with Git for students and development teams.
+              </p>
+              <div class="resource-meta">
+                <span>7.7 MB</span>
+                <span class="downloads" data-download-count>—</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <a
+                class="btn btn-primary js-download"
+                href="https://github.com/sandeepjain2000/placementhub/releases/download/resources/Mastering-Git-A-Comprehensive-Guide-to-Version-Control.pptx"
+                data-file-id="mastering-git"
+                data-file-name="Mastering-Git-A-Comprehensive-Guide-to-Version-Control.pptx"
+                data-file-title="Mastering Git"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download
+              </a>
+            </div>
+          </article>
+
           <article class="resource-item" data-resource-id="security-tools-overview">
             <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
               <h3>Comprehensive Security Tools Overview</h3>
               <p class="resource-desc">
                 A walkthrough of essential security tools across the modern cybersecurity stack.
@@ -838,6 +868,7 @@
 
           <article class="resource-item" data-resource-id="cybersecurity-career">
             <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
               <h3>From Classroom to Cybersecurity Career</h3>
               <p class="resource-desc">
                 Guidance for students moving from academic learning into cybersecurity roles.
@@ -863,8 +894,65 @@
             </div>
           </article>
 
+          <article class="resource-item" data-resource-id="monitoring-tools">
+            <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
+              <h3>Monitoring Tools</h3>
+              <p class="resource-desc">
+                An overview of monitoring tools used to observe systems, apps, and infrastructure health.
+              </p>
+              <div class="resource-meta">
+                <span>1.7 MB</span>
+                <span class="downloads" data-download-count>—</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <a
+                class="btn btn-primary js-download"
+                href="https://github.com/sandeepjain2000/placementhub/releases/download/resources/Monitoring-Tools.pptx"
+                data-file-id="monitoring-tools"
+                data-file-name="Monitoring-Tools.pptx"
+                data-file-title="Monitoring Tools"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item" data-resource-id="secure-coding-handbook">
+            <div class="resource-info">
+              <span class="resource-type">Handbook · PDF</span>
+              <h3>Secure Coding Handbook</h3>
+              <p class="resource-desc">
+                Practical secure coding guidance to help teams ship safer software.
+              </p>
+              <div class="resource-meta">
+                <span>1.1 MB</span>
+                <span class="downloads" data-download-count>—</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <a
+                class="btn btn-primary js-download"
+                href="https://github.com/sandeepjain2000/placementhub/releases/download/resources/SECURE-CODING-HANDBOOK.pdf"
+                data-file-id="secure-coding-handbook"
+                data-file-name="SECURE-CODING-HANDBOOK.pdf"
+                data-file-title="Secure Coding Handbook"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download
+              </a>
+            </div>
+          </article>
+
           <article class="resource-item" data-resource-id="project-management">
             <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
               <h3>Project Management Fundamentals</h3>
               <p class="resource-desc">
                 Core project management concepts for campus programs and industry-ready teams.
@@ -953,11 +1041,12 @@
     })();
 
     (function () {
-      var REPO = 'sandeepjain2000/placementhub';
-      var RELEASE_TAG = 'resources';
+      // Click-based counters (GitHub release download_count lags and often misses clicks)
+      // Click-based counts (GitHub release download_count often lags / misses clicks)
+      var COUNTER_NS = 'phub-downloads';
+      var COUNTER_BASE = 'https://api.counterapi.dev/v1/' + COUNTER_NS + '/';
       var LOG_KEY = 'ph_download_log';
-      var CACHE_KEY = 'ph_gh_release_counts';
-      var CACHE_MS = 60 * 1000;
+      var counts = {};
 
       function formatCount(n) {
         var num = Number(n) || 0;
@@ -970,39 +1059,42 @@
         if (el) el.textContent = formatCount(count);
       }
 
-      function applyCounts(byName) {
-        document.querySelectorAll('a.js-download').forEach(function (link) {
-          var name = link.getAttribute('data-file-name');
-          var item = link.closest('.resource-item');
-          if (!item || !name) return;
-          setCountLabel(item, typeof byName[name] === 'number' ? byName[name] : 0);
-        });
+      function parseCount(data) {
+        return data && typeof data.count === 'number' ? data.count : null;
       }
 
-      function loadCountsFromGitHub() {
-        // GitHub Release asset download_count — no third-party counter
-        fetch('https://api.github.com/repos/' + REPO + '/releases/tags/' + encodeURIComponent(RELEASE_TAG), {
-          headers: { Accept: 'application/vnd.github+json' },
-          cache: 'no-store'
-        })
+      function loadCount(fileId, item) {
+        // Prefer GET; if it fails, leave placeholder (do not /up — that would inflate counts)
+        fetch(COUNTER_BASE + encodeURIComponent(fileId) + '/', { method: 'GET', mode: 'cors', cache: 'no-store' })
           .then(function (res) { return res.ok ? res.json() : null; })
-          .then(function (release) {
-            if (!release || !Array.isArray(release.assets)) return;
-            var byName = {};
-            release.assets.forEach(function (asset) {
-              byName[asset.name] = asset.download_count || 0;
-            });
-            try {
-              sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), byName: byName }));
-            } catch (err) { /* ignore */ }
-            applyCounts(byName);
+          .then(function (data) {
+            var n = parseCount(data);
+            if (n === null) n = 0;
+            counts[fileId] = n;
+            setCountLabel(item, n);
           })
           .catch(function () {
-            try {
-              var cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || 'null');
-              if (cached && cached.byName) applyCounts(cached.byName);
-            } catch (err) { /* leave — */ }
+            counts[fileId] = counts[fileId] || 0;
+            setCountLabel(item, counts[fileId]);
           });
+      }
+
+      function bumpCount(fileId, item) {
+        // Optimistic UI so the number moves immediately on every Download click
+        var next = (counts[fileId] || 0) + 1;
+        counts[fileId] = next;
+        setCountLabel(item, next);
+
+        fetch(COUNTER_BASE + encodeURIComponent(fileId) + '/up', { method: 'GET', mode: 'cors', cache: 'no-store' })
+          .then(function (res) { return res.ok ? res.json() : null; })
+          .then(function (data) {
+            var n = parseCount(data);
+            if (n !== null) {
+              counts[fileId] = n;
+              setCountLabel(item, n);
+            }
+          })
+          .catch(function () { /* keep optimistic value */ });
       }
 
       function appendLocalLog(entry) {
@@ -1016,19 +1108,20 @@
       }
 
       function trackAnalytics(fileId, fileName, fileTitle, linkUrl) {
+        var ext = (fileName && fileName.split('.').pop()) || 'pptx';
         var payload = {
           event: 'file_download',
           file_id: fileId,
           file_name: fileName,
           file_title: fileTitle,
-          file_extension: 'pptx'
+          file_extension: ext
         };
 
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'file_download', {
             file_id: fileId,
             file_name: fileName,
-            file_extension: 'pptx',
+            file_extension: ext,
             link_text: fileTitle,
             link_url: linkUrl
           });
@@ -1049,24 +1142,19 @@
         });
       }
 
-      try {
-        var cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || 'null');
-        if (cached && cached.byName && cached.ts && Date.now() - cached.ts < CACHE_MS) {
-          applyCounts(cached.byName);
-        }
-      } catch (err) { /* ignore */ }
-
-      loadCountsFromGitHub();
+      document.querySelectorAll('.resource-item[data-resource-id]').forEach(function (item) {
+        loadCount(item.getAttribute('data-resource-id'), item);
+      });
 
       document.querySelectorAll('a.js-download').forEach(function (link) {
         link.addEventListener('click', function () {
           var fileId = link.getAttribute('data-file-id');
           var fileName = link.getAttribute('data-file-name');
           var fileTitle = link.getAttribute('data-file-title');
-          if (!fileId) return;
+          var item = link.closest('.resource-item');
+          if (!fileId || !item) return;
+          bumpCount(fileId, item);
           trackAnalytics(fileId, fileName, fileTitle, link.href);
-          // GitHub increments asset download_count; refresh shortly after
-          setTimeout(loadCountsFromGitHub, 2500);
         });
       });
 
