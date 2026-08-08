@@ -1,5 +1,7 @@
 # Deck build tooling (keep generated PPTX)
 decks/build-docker-kimi.js
+decks/build-implementation-roadmap.js
+decks/build-successful-business-models.js
 decks/node_modules/
 decks/package.json
 decks/package-lock.json
@@ -7,3 +9,6 @@ decks/package-lock.json
 # Large template archive — not a site resource
 decks/graphicriver-Ol8JT3TB-motagua-multipurpose-powerpoint-template.zip
 decks/graphicriver-Ol8JT3TB-motagua-multipurpose-powerpoint-template/
+
+# Duplicate/spaced filenames (hyphenated versions are published)
+decks/Successful Business Models -2.pptx

@@ -393,7 +393,8 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1.25rem;
-      max-width: 1040px;
+      max-width: 1100px;
+      width: 100%;
       margin: 0 auto;
     }
     .resource-item {
@@ -438,6 +439,7 @@
     .resource-icon--security { background: #ECFDF5; border-color: #A7F3D0; color: #059669; }
     .resource-icon--monitor { background: #EEF2FF; border-color: #C7D2FE; color: #4F46E5; }
     .resource-icon--pm { background: #FEF3C7; border-color: #FDE68A; color: #D97706; }
+    .resource-icon--models { background: #EEF2FF; border-color: #C7D2FE; color: #4338CA; }
     .resource-icon--quiz { background: #F5F3FF; border-color: #DDD6FE; color: #7C3AED; }
     .resource-icon--roadmap { background: #EEF2FF; border-color: #C7D2FE; color: #4338CA; }
     .resource-icon--handbook { background: #FEF2F2; border-color: #FECACA; color: #DC2626; }
@@ -656,7 +658,7 @@
       .contact-card { padding: 1.75rem 1.25rem; }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 560px) {
       .resource-list { grid-template-columns: 1fr; }
     }
   </style>
@@ -835,7 +837,7 @@
           <h2 id="resources-heading">Resources</h2>
           <p>
             Download presentation decks and handbooks on cybersecurity, DevOps, Git,
-            monitoring, and project management—plus take the daily CyberShield quiz.
+            monitoring, project management, and business models—plus take the daily CyberShield quiz.
             Free materials for students, colleges, and partners.
           </p>
         </div>
@@ -1124,6 +1126,39 @@
                 class="btn btn-primary"
                 href="decks/Project-Management-Fundamentals.pptx"
                 download="Project-Management-Fundamentals.pptx"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-item" data-resource-id="successful-business-models">
+            <div class="resource-icon resource-icon--models" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 7h16M4 12h10M4 17h13" stroke-linecap="round"/>
+                <circle cx="18" cy="12" r="2" fill="currentColor" stroke="none"/>
+                <circle cx="20" cy="17" r="2" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
+              <h3>Successful Business Models</h3>
+              <p class="resource-desc">
+                Ten proven business patterns — how they work, where they began, and who innovated.
+              </p>
+              <div class="resource-meta">
+                <span>0.6 MB</span>
+                <span class="downloads">54 downloads</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <a
+                class="btn btn-primary"
+                href="decks/Successful-Business-Models.pptx"
+                download="Successful-Business-Models.pptx"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
