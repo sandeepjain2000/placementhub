@@ -526,6 +526,10 @@
     .resource-meta .downloads {
       color: var(--primary-700);
     }
+    .resource-meta .downloads .count-val {
+      font-weight: 700;
+      display: inline-block;
+    }
     .resource-actions {
       grid-column: 1 / -1;
       display: flex;
@@ -932,7 +936,7 @@
               </p>
               <div class="resource-meta">
                 <span>0.4 MB</span>
-                <span class="downloads">72 downloads</span>
+                <span class="downloads"><span class="count-val">72</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -963,7 +967,7 @@
               </p>
               <div class="resource-meta">
                 <span>0.2 MB</span>
-                <span class="downloads">128 downloads</span>
+                <span class="downloads"><span class="count-val">128</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -994,7 +998,7 @@
               </p>
               <div class="resource-meta">
                 <span>7.7 MB</span>
-                <span class="downloads">94 downloads</span>
+                <span class="downloads"><span class="count-val">94</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1027,7 +1031,7 @@
               </p>
               <div class="resource-meta">
                 <span>9.4 MB</span>
-                <span class="downloads">211 downloads</span>
+                <span class="downloads"><span class="count-val">211</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1059,7 +1063,7 @@
               </p>
               <div class="resource-meta">
                 <span>2.1 MB</span>
-                <span class="downloads">176 downloads</span>
+                <span class="downloads"><span class="count-val">176</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1090,7 +1094,7 @@
               </p>
               <div class="resource-meta">
                 <span>1.7 MB</span>
-                <span class="downloads">63 downloads</span>
+                <span class="downloads"><span class="count-val">63</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1123,7 +1127,7 @@
               </p>
               <div class="resource-meta">
                 <span>1.1 MB</span>
-                <span class="downloads">149 downloads</span>
+                <span class="downloads"><span class="count-val">149</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1155,7 +1159,7 @@
               </p>
               <div class="resource-meta">
                 <span>3.2 MB</span>
-                <span class="downloads">87 downloads</span>
+                <span class="downloads"><span class="count-val">87</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1188,7 +1192,7 @@
               </p>
               <div class="resource-meta">
                 <span>0.6 MB</span>
-                <span class="downloads">54 downloads</span>
+                <span class="downloads"><span class="count-val">54</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1222,7 +1226,7 @@
               </p>
               <div class="resource-meta">
                 <span>0.8 MB</span>
-                <span class="downloads">41 downloads</span>
+                <span class="downloads"><span class="count-val">41</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1256,7 +1260,7 @@
               </p>
               <div class="resource-meta">
                 <span>0.4 MB</span>
-                <span class="downloads">58 downloads</span>
+                <span class="downloads"><span class="count-val">58</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1292,7 +1296,7 @@
               </p>
               <div class="resource-meta">
                 <span>1.9 MB</span>
-                <span class="downloads">36 downloads</span>
+                <span class="downloads"><span class="count-val">36</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1325,7 +1329,7 @@
               </p>
               <div class="resource-meta">
                 <span>0.2 MB</span>
-                <span class="downloads">49 downloads</span>
+                <span class="downloads"><span class="count-val">49</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1361,7 +1365,7 @@
               </p>
               <div class="resource-meta">
                 <span>106 slides · ~5 MB / part</span>
-                <span class="downloads">Parts 1–6</span>
+                <span class="downloads">Parts 1–6 · <span class="count-val">180</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1392,7 +1396,7 @@
               </p>
               <div class="resource-meta">
                 <span>1.0 MB · 13 pages</span>
-                <span class="downloads">38 downloads</span>
+                <span class="downloads"><span class="count-val">38</span> downloads</span>
               </div>
             </div>
             <div class="resource-actions">
@@ -1464,6 +1468,165 @@
           form.classList.add('is-hidden');
           confirm.classList.add('is-visible');
         });
+      }
+    })();
+
+    (function () {
+      // Baseline initial seed counts for each resource
+      var BASE_COUNTS = {
+        'implementation-roadmap': 72,
+        'docker-containerization': 128,
+        'mastering-git': 94,
+        'security-tools-overview': 211,
+        'cybersecurity-career': 176,
+        'monitoring-tools': 63,
+        'secure-coding-handbook': 149,
+        'project-management': 87,
+        'successful-business-models': 54,
+        'strategic-hrm': 41,
+        'computer-networks': 58,
+        'deep-learning-midsem': 36,
+        'dbms-introduction': 49,
+        'machine-learning-masterclass': 180,
+        'operating-systems-cpu-memory': 38
+      };
+
+      var LOCAL_STORAGE_KEY = 'phub_dl_increments_v1';
+      var COUNTER_NAMESPACE = 'placementhub_online_v1';
+      var API_BASE = 'https://api.counterapi.dev/v1/' + COUNTER_NAMESPACE + '/';
+
+      function getLocalIncrements() {
+        try {
+          var data = localStorage.getItem(LOCAL_STORAGE_KEY);
+          return data ? JSON.parse(data) : {};
+        } catch (e) {
+          return {};
+        }
+      }
+
+      function saveLocalIncrement(resId) {
+        try {
+          var incs = getLocalIncrements();
+          incs[resId] = (incs[resId] || 0) + 1;
+          localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(incs));
+          return incs[resId];
+        } catch (e) {
+          return 1;
+        }
+      }
+
+      function getEffectiveCount(resId, remoteVal) {
+        var base = BASE_COUNTS[resId] || 0;
+        var incs = getLocalIncrements();
+        var localVal = base + (incs[resId] || 0);
+        if (typeof remoteVal === 'number' && !isNaN(remoteVal) && remoteVal > 0) {
+          return Math.max(localVal, remoteVal);
+        }
+        return localVal;
+      }
+
+      function updateUI(resId, count) {
+        var card = document.querySelector('.resource-item[data-resource-id="' + resId + '"]');
+        if (!card) return;
+        var countEl = card.querySelector('.count-val');
+        if (countEl) {
+          countEl.textContent = count.toLocaleString();
+        }
+      }
+
+      function initCounts() {
+        var items = document.querySelectorAll('.resource-item[data-resource-id]');
+        items.forEach(function (item) {
+          var resId = item.getAttribute('data-resource-id');
+          if (!resId || !(resId in BASE_COUNTS)) return;
+
+          // Set immediate count based on base + local increments
+          var current = getEffectiveCount(resId, null);
+          updateUI(resId, current);
+
+          // Try fetching global count asynchronously from CounterAPI
+          fetch(API_BASE + encodeURIComponent(resId) + '/')
+            .then(function (res) {
+              if (res.ok) return res.json();
+              return null;
+            })
+            .then(function (data) {
+              if (data && typeof data.count === 'number') {
+                var best = getEffectiveCount(resId, data.count);
+                updateUI(resId, best);
+              }
+            })
+            .catch(function () {
+              // Network/CORS/Adblock error -> maintain local count, NEVER set count to 0!
+            });
+        });
+      }
+
+      function handleDownloadClick(resId) {
+        if (!resId || !(resId in BASE_COUNTS)) return;
+
+        // 1. Instant local increment & UI update
+        saveLocalIncrement(resId);
+        var newCount = getEffectiveCount(resId, null);
+        updateUI(resId, newCount);
+
+        // Visual feedback animation (subtle pulse scale)
+        var card = document.querySelector('.resource-item[data-resource-id="' + resId + '"]');
+        if (card) {
+          var countEl = card.querySelector('.count-val');
+          if (countEl) {
+            countEl.style.transition = 'transform 0.2s ease, color 0.2s ease';
+            countEl.style.transform = 'scale(1.35)';
+            countEl.style.color = 'var(--primary-600)';
+            setTimeout(function () {
+              countEl.style.transform = 'scale(1)';
+              countEl.style.color = '';
+            }, 300);
+          }
+        }
+
+        // 2. Non-blocking background remote hit
+        try {
+          fetch(API_BASE + encodeURIComponent(resId) + '/up', {
+            method: 'GET',
+            mode: 'cors',
+            keepalive: true
+          })
+            .then(function (res) {
+              if (res.ok) return res.json();
+              return null;
+            })
+            .then(function (data) {
+              if (data && typeof data.count === 'number') {
+                var best = getEffectiveCount(resId, data.count);
+                updateUI(resId, best);
+              }
+            })
+            .catch(function () {});
+        } catch (e) {}
+      }
+
+      function setupListeners() {
+        document.addEventListener('click', function (e) {
+          var link = e.target.closest('a[download]');
+          if (!link) return;
+
+          var card = link.closest('.resource-item[data-resource-id]');
+          if (!card) return;
+
+          var resId = card.getAttribute('data-resource-id');
+          handleDownloadClick(resId);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+          initCounts();
+          setupListeners();
+        });
+      } else {
+        initCounts();
+        setupListeners();
       }
     })();
   </script>
