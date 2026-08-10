@@ -448,6 +448,38 @@
     .resource-icon--network { background: #ECFDF5; border-color: #A7F3D0; color: #047857; }
     .resource-icon--dl { background: #EEF2FF; border-color: #C7D2FE; color: #4F46E5; }
     .resource-icon--dbms { background: #FFF7ED; border-color: #FED7AA; color: #EA580C; }
+    .resource-icon--ml { background: #F5F3FF; border-color: #DDD6FE; color: #6D28D9; }
+    .resource-part-links {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.45rem;
+      width: 100%;
+    }
+    .resource-part-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.5rem;
+      padding: 0.45rem 0.35rem;
+      border-radius: 0.65rem;
+      border: 1px solid var(--primary-200);
+      background: var(--primary-50);
+      color: var(--primary-700);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.15s ease-out, border-color 0.15s ease-out, color 0.15s ease-out;
+    }
+    .resource-part-links a:hover {
+      background: var(--primary-600);
+      border-color: var(--primary-600);
+      color: #fff;
+    }
+    @media (max-width: 420px) {
+      .resource-part-links {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
     .resource-info {
       grid-column: 2;
       grid-row: 1 / 3;
@@ -841,7 +873,7 @@
           <h2 id="resources-heading">Resources</h2>
           <p>
             Download presentation decks and handbooks on cybersecurity, DevOps, CS fundamentals,
-            HR, monitoring, project management, and business models—plus take the daily CyberShield quiz.
+            machine learning, HR, monitoring, project management, and business models—plus take the daily CyberShield quiz.
             Free materials for students, colleges, and partners.
           </p>
         </div>
@@ -1306,6 +1338,40 @@
                 </svg>
                 Download
               </a>
+            </div>
+          </article>
+
+          <article class="resource-item" data-resource-id="machine-learning-masterclass">
+            <div class="resource-icon resource-icon--ml" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="2.2"/>
+                <circle cx="5" cy="7" r="1.6"/>
+                <circle cx="19" cy="7" r="1.6"/>
+                <circle cx="5" cy="17" r="1.6"/>
+                <circle cx="19" cy="17" r="1.6"/>
+                <path d="M6.4 8l3.8 2.4M13.8 10.4L17.6 8M6.4 16l3.8-2.4M13.8 13.6L17.6 16" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX · 6 Parts</span>
+              <h3>Machine Learning Masterclass</h3>
+              <p class="resource-desc">
+                Complete masterclass split into 6 downloadable parts (~5&nbsp;MB each) for easier sharing.
+              </p>
+              <div class="resource-meta">
+                <span>106 slides · ~5 MB / part</span>
+                <span class="downloads">Parts 1–6</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <nav class="resource-part-links" aria-label="Machine Learning Masterclass parts">
+                <a href="decks/Machine-Learning-Masterclass-Part-1.pptx" download="Machine-Learning-Masterclass-Part-1.pptx" title="Download Part 1 (slides 1–18)">1</a>
+                <a href="decks/Machine-Learning-Masterclass-Part-2.pptx" download="Machine-Learning-Masterclass-Part-2.pptx" title="Download Part 2 (slides 19–36)">2</a>
+                <a href="decks/Machine-Learning-Masterclass-Part-3.pptx" download="Machine-Learning-Masterclass-Part-3.pptx" title="Download Part 3 (slides 37–54)">3</a>
+                <a href="decks/Machine-Learning-Masterclass-Part-4.pptx" download="Machine-Learning-Masterclass-Part-4.pptx" title="Download Part 4 (slides 55–72)">4</a>
+                <a href="decks/Machine-Learning-Masterclass-Part-5.pptx" download="Machine-Learning-Masterclass-Part-5.pptx" title="Download Part 5 (slides 73–89)">5</a>
+                <a href="decks/Machine-Learning-Masterclass-Part-6.pptx" download="Machine-Learning-Masterclass-Part-6.pptx" title="Download Part 6 (slides 90–106)">6</a>
+              </nav>
             </div>
           </article>
         </div>
