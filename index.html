@@ -449,6 +449,7 @@
     .resource-icon--dl { background: #EEF2FF; border-color: #C7D2FE; color: #4F46E5; }
     .resource-icon--dbms { background: #FFF7ED; border-color: #FED7AA; color: #EA580C; }
     .resource-icon--ml { background: #F5F3FF; border-color: #DDD6FE; color: #6D28D9; }
+    .resource-icon--os { background: #ECFEFF; border-color: #A5F3FC; color: #0E7490; }
     .resource-part-links {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1374,11 +1375,40 @@
               </nav>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <section id="contact" class="contact-wrap">
+          <article class="resource-item" data-resource-id="operating-systems-cpu-memory">
+            <div class="resource-icon resource-icon--os" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="4" y="4" width="16" height="16" rx="2"/>
+                <path d="M4 9h16M9 9v11" stroke-linecap="round"/>
+                <path d="M12 13h5M12 16h3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="resource-info">
+              <span class="resource-type">Presentation · PDF</span>
+              <h3>Operating Systems — CPU Scheduling &amp; Memory Management</h3>
+              <p class="resource-desc">
+                How a modern OS decides which process runs next, and how it keeps every process’s data safely in memory.
+              </p>
+              <div class="resource-meta">
+                <span>1.0 MB · 13 pages</span>
+                <span class="downloads">38 downloads</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <a
+                class="btn btn-primary"
+                href="decks/Operating-Systems-CPU-Scheduling-Memory-Management.pdf"
+                download="Operating-Systems-CPU-Scheduling-Memory-Management.pdf"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download
+              </a>
+            </div>
+          </article>
+        </div>
       <div class="contact-card">
         <h2>Contact Us</h2>
         <p class="lead">Tell us a little about your college or organisation. We’ll get back to you.</p>
