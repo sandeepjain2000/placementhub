@@ -450,6 +450,7 @@
     .resource-icon--dbms { background: #FFF7ED; border-color: #FED7AA; color: #EA580C; }
     .resource-icon--ml { background: #F5F3FF; border-color: #DDD6FE; color: #6D28D9; }
     .resource-icon--os { background: #ECFEFF; border-color: #A5F3FC; color: #0E7490; }
+    .resource-icon--ph { background: #EEF2FF; border-color: #C7D2FE; color: #4F46E5; }
     .resource-part-links {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -885,6 +886,38 @@
         </div>
 
         <div class="resource-list">
+          <article class="resource-item" data-resource-id="placementhub-os-campus">
+            <div class="resource-icon resource-icon--ph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3.5" y="4" width="17" height="16" rx="2"/>
+                <path d="M8 8h8M8 12h5M8 16h3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="resource-info">
+              <span class="resource-type">Presentation · PPTX</span>
+              <h3>PlacementHub — The Operating System for Campus Placements</h3>
+              <p class="resource-desc">
+                An overview of PlacementHub: one platform that runs internships, drives, offers, and campus placement operations year-round.
+              </p>
+              <div class="resource-meta">
+                <span>1.9 MB · 14 slides</span>
+                <span class="downloads"><span class="count-val">12</span> downloads</span>
+              </div>
+            </div>
+            <div class="resource-actions">
+              <a
+                class="btn btn-primary"
+                href="decks/PlacementHub-The-Operating-System-for-Campus-Placements.pptx"
+                download="PlacementHub-The-Operating-System-for-Campus-Placements.pptx"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Download
+              </a>
+            </div>
+          </article>
+
           <article class="resource-item" data-resource-id="cybershield-daily-quiz">
             <div class="resource-icon resource-icon--quiz" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -1476,6 +1509,7 @@
     (function () {
       // Baseline initial seed counts for each resource
       var BASE_COUNTS = {
+        'placementhub-os-campus': 12,
         'implementation-roadmap': 72,
         'docker-containerization': 128,
         'mastering-git': 94,
