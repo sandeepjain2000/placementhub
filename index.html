@@ -226,29 +226,36 @@
       color: var(--text-secondary);
       line-height: 1.55;
     }
-    .audience {
+    .highlights {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.75rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 2rem;
       max-width: 1000px;
       margin: 4.5rem auto 0;
-      padding-top: 2.5rem;
+      padding-top: 2.75rem;
       border-top: 1px solid var(--border-default);
-      text-align: left;
+      text-align: center;
     }
-    .audience h3 {
-      margin: 0 0 0.4rem;
-      font-size: 1.05rem;
-      font-weight: 700;
+    .highlights .label {
+      margin: 0 0 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary-700);
     }
-    .audience p {
+    .highlights p {
       margin: 0;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      font-weight: 600;
       color: var(--text-secondary);
-      line-height: 1.55;
+      line-height: 1.45;
     }
-    @media (max-width: 720px) {
-      .audience { grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (max-width: 800px) {
+      .highlights { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+    }
+    @media (max-width: 420px) {
+      .highlights { grid-template-columns: 1fr; }
     }
 
     .section {
@@ -854,18 +861,22 @@
         </aside>
       </div>
 
-      <div class="audience" aria-label="Who PlacementHub is built for">
+      <div class="highlights" aria-label="What PlacementHub focuses on">
         <div>
-          <h3>For Students</h3>
-          <p>Profile, resume, jobs, internships, projects, and applications in one place.</p>
+          <p class="label">Colleges</p>
+          <p>Connecting Institutions</p>
         </div>
         <div>
-          <h3>For Colleges</h3>
-          <p>Placement management, student records, eligibility rules, drives, employers, and reports.</p>
+          <p class="label">Students</p>
+          <p>Building Career Opportunities</p>
         </div>
         <div>
-          <h3>For Employers</h3>
-          <p>Campus hiring, job posting, eligibility filters, candidate pipeline, and interview management.</p>
+          <p class="label">Employers</p>
+          <p>Connecting Talent with Employers</p>
+        </div>
+        <div>
+          <p class="label">Career Outcomes</p>
+          <p>Enabling Better Placement Experiences</p>
         </div>
       </div>
     </section>
