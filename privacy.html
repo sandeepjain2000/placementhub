@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <title>Privacy Policy — PlacementHub</title>
+  <meta name="description" content="How PlacementHub collects, uses, shares, and protects personal information for students, colleges, and employers." />
+  <script>
+    (function () {
+      try {
+        var KEY = 'ph_fresh_session';
+        var url = new URL(window.location.href);
+        if (url.searchParams.has('_r')) {
+          url.searchParams.delete('_r');
+          history.replaceState(null, '', url.pathname + url.search + url.hash);
+          sessionStorage.setItem(KEY, '1');
+          return;
+        }
+        if (sessionStorage.getItem(KEY)) return;
+        url.searchParams.set('_r', String(Date.now()));
+        window.location.replace(url.toString());
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-50: #EEF2FF;
+      --primary-200: #C7D2FE;
+      --primary-500: #6366F1;
+      --primary-600: #4F46E5;
+      --primary-700: #4338CA;
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F9FAFB;
+      --text-primary: #111827;
+      --text-secondary: #374151;
+      --border-default: rgba(0, 0, 0, 0.08);
+      --font-sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -3rem;
+      z-index: 100;
+      background: var(--primary-600);
+      color: #fff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+    .skip-link:focus { top: 0.75rem; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border-default);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      line-height: 0;
+    }
+    .brand-logo {
+      height: 5.75rem;
+      width: auto;
+      max-width: min(480px, 70vw);
+      object-fit: contain;
+      object-position: left center;
+      display: block;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #000;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .nav-links a:hover { text-decoration: underline; }
+
+    .policy {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.75rem 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 16.5rem) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: start;
+    }
+    .toc {
+      position: sticky;
+      top: 8.5rem;
+      padding: 1.25rem 0;
+    }
+    .toc h2 {
+      margin: 0 0 0.85rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+    .toc ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .toc a {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      line-height: 1.35;
+      padding: 0.35rem 0.6rem;
+      border-radius: 0.375rem;
+    }
+    .toc a:hover,
+    .toc a:focus-visible {
+      color: var(--primary-700);
+      background: var(--primary-50);
+      outline: none;
+    }
+
+    .policy-body {
+      max-width: 46rem;
+      min-width: 0;
+    }
+    .policy-kicker {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 9999px;
+      border: 1px solid var(--primary-200);
+      background: var(--primary-50);
+      color: var(--primary-700);
+      padding: 0.3rem 0.85rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin: 0 0 1.15rem;
+    }
+    .policy-body h1 {
+      margin: 0 0 0.65rem;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .updated {
+      margin: 0 0 1.75rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .policy-body > p,
+    .policy-section p {
+      margin: 0 0 1rem;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 70ch;
+    }
+    .policy-section {
+      margin-top: 2.75rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-default);
+    }
+    .policy-section h2 {
+      margin: 0 0 1rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      scroll-margin-top: 8.75rem;
+    }
+    .policy-section h3 {
+      margin: 1.5rem 0 0.65rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .policy-section ul {
+      margin: 0 0 1rem;
+      padding: 0 0 0 1.15rem;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .policy-section li { margin: 0.2rem 0; }
+    .policy-section a {
+      color: var(--primary-700);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .policy-section a:hover { color: var(--primary-600); }
+
+    .contact-box {
+      margin-top: 1.25rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-default);
+      border-radius: 1rem;
+      padding: 1.35rem 1.5rem;
+    }
+    .contact-box p {
+      margin: 0 0 0.35rem;
+      color: var(--text-primary);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .contact-box p:last-child { margin-bottom: 0; }
+    .contact-box .org {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .site-footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-default);
+      padding: 3rem 1.5rem;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
+    .footer-brand .mark {
+      display: flex;
+      height: 1.5rem;
+      width: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.375rem;
+      background: var(--primary-600);
+      color: #fff;
+      font-size: 0.75rem;
+    }
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .footer-nav a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+    .footer-nav a:hover { color: var(--primary-600); }
+    .footer-copy {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin: 0;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .policy {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-top: 2rem;
+      }
+      .toc {
+        position: static;
+        padding: 0 0 0.5rem;
+      }
+      .toc ol {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.15rem 1rem;
+      }
+    }
+    @media (max-width: 560px) {
+      .toc ol { grid-template-columns: 1fr; }
+      .brand-logo { height: 4.25rem; }
+      .policy-section h2 { scroll-margin-top: 7.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#policy">Skip to privacy policy</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="PlacementHub home">
+        <img class="brand-logo" src="images/logo.png" alt="PlacementHub" width="480" height="92" />
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#resources">Resources</a>
+          <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
+          <a href="index.html#contact">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="policy" id="policy">
+    <nav class="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#about">1. About PlacementHub</a></li>
+        <li><a href="#collect">2. Information We Collect</a></li>
+        <li><a href="#use">3. How We Use Information</a></li>
+        <li><a href="#share">4. How Information May Be Shared</a></li>
+        <li><a href="#institutions">5. Information Provided by Educational Institutions</a></li>
+        <li><a href="#employers">6. Information Provided to Employers</a></li>
+        <li><a href="#cookies">7. Cookies and Similar Technologies</a></li>
+        <li><a href="#communications">8. Communications</a></li>
+        <li><a href="#security">9. Data Security</a></li>
+        <li><a href="#retention">10. Data Retention</a></li>
+        <li><a href="#rights">11. Your Choices and Rights</a></li>
+        <li><a href="#third-parties">12. Third-Party Services</a></li>
+        <li><a href="#links">13. External Links</a></li>
+        <li><a href="#children">14. Children’s and Young Users’ Information</a></li>
+        <li><a href="#changes">15. Changes to This Privacy Policy</a></li>
+        <li><a href="#contact">16. Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <article class="policy-body">
+      <p class="policy-kicker">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last Updated: 21 August 2026</p>
+
+      <p>PlacementHub (“PlacementHub”, “we”, “us”, or “our”) respects your privacy and is committed to protecting the personal information you provide when using our website, platform, applications, and related services.</p>
+      <p>This Privacy Policy explains what information we collect, how we use it, how we protect it, and the choices available to you.</p>
+      <p>By accessing or using PlacementHub, you acknowledge that you have read and understood this Privacy Policy.</p>
+
+      <section class="policy-section" id="about">
+        <h2>1. About PlacementHub</h2>
+        <p>PlacementHub is a campus placement and industry engagement platform designed to connect and support students, educational institutions, placement teams, and employers.</p>
+        <p>Our platform may provide functionality including student profiles, resumes, skills, job and internship opportunities, employer recruitment processes, placement drives, applications, communications, and related reporting and management tools.</p>
+      </section>
+
+      <section class="policy-section" id="collect">
+        <h2>2. Information We Collect</h2>
+        <p>Depending on how you use PlacementHub, we may collect the following information:</p>
+
+        <h3>Students and Candidates</h3>
+        <ul>
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Mobile number</li>
+          <li>Date of birth or age, where required</li>
+          <li>Educational institution and academic details</li>
+          <li>Course, degree, branch and specialisation</li>
+          <li>Academic performance and qualifications</li>
+          <li>Skills and certifications</li>
+          <li>Resume and profile information</li>
+          <li>Internship, project, hackathon and work experience</li>
+          <li>Job and internship applications</li>
+          <li>Placement preferences</li>
+          <li>Profile photographs, where voluntarily provided</li>
+          <li>Communications and information submitted through the platform</li>
+        </ul>
+
+        <h3>Colleges and Educational Institutions</h3>
+        <ul>
+          <li>Institution name</li>
+          <li>Contact details</li>
+          <li>Placement officer/TPO information</li>
+          <li>User account information</li>
+          <li>Placement drive information</li>
+          <li>Student and placement-related records uploaded or managed through the platform</li>
+          <li>Administrative and reporting information</li>
+        </ul>
+
+        <h3>Employers and Recruiters</h3>
+        <ul>
+          <li>Company/organisation name</li>
+          <li>Recruiter name and designation</li>
+          <li>Business contact details</li>
+          <li>Job and internship descriptions</li>
+          <li>Recruitment requirements</li>
+          <li>Candidate evaluation and selection information</li>
+          <li>Communication and recruitment activity conducted through the platform</li>
+        </ul>
+
+        <h3>Automatically Collected Information</h3>
+        <p>When you access our website or platform, we may automatically collect certain technical information, such as:</p>
+        <ul>
+          <li>IP address</li>
+          <li>Browser type and version</li>
+          <li>Device type</li>
+          <li>Operating system</li>
+          <li>Date and time of access</li>
+          <li>Pages or features accessed</li>
+          <li>Approximate usage and diagnostic information</li>
+          <li>Cookies and similar technologies</li>
+        </ul>
+      </section>
+
+      <section class="policy-section" id="use">
+        <h2>3. How We Use Information</h2>
+        <p>We may use information collected through PlacementHub to:</p>
+        <ul>
+          <li>Create and manage user accounts</li>
+          <li>Provide platform functionality</li>
+          <li>Connect students with colleges and employers</li>
+          <li>Facilitate job, internship and placement opportunities</li>
+          <li>Process applications</li>
+          <li>Allow employers to evaluate candidates</li>
+          <li>Allow colleges to manage placement activities</li>
+          <li>Communicate with users</li>
+          <li>Provide customer and technical support</li>
+          <li>Improve the platform and user experience</li>
+          <li>Maintain security and prevent fraud, misuse or unauthorised access</li>
+          <li>Generate operational and analytical reports</li>
+          <li>Send service-related communications</li>
+          <li>Comply with applicable laws and legal requirements</li>
+        </ul>
+        <p>Where appropriate, we may use aggregated or anonymised information for analytical, statistical, research or product-improvement purposes.</p>
+      </section>
+
+      <section class="policy-section" id="share">
+        <h2>4. How Information May Be Shared</h2>
+        <p>PlacementHub is designed to facilitate interaction between students, educational institutions and employers.</p>
+        <p>Depending on the user's actions and the functionality enabled by an institution or employer, information may therefore be visible or shared with:</p>
+        <ul>
+          <li>The student's educational institution</li>
+          <li>Placement officers and authorised college administrators</li>
+          <li>Employers and recruiters</li>
+          <li>Students or other users where the relevant feature specifically permits it</li>
+          <li>Service providers that support our platform</li>
+          <li>Technology, hosting, communication, analytics and security providers</li>
+          <li>Government authorities or other parties where required by applicable law</li>
+        </ul>
+        <p>We do not sell personal information to third parties as a business practice.</p>
+        <p>We aim to limit information sharing to what is reasonably necessary for providing the relevant service or fulfilling a legitimate operational, contractual or legal requirement.</p>
+      </section>
+
+      <section class="policy-section" id="institutions">
+        <h2>5. Information Provided by Educational Institutions</h2>
+        <p>Where an educational institution uses PlacementHub, the institution may provide student or candidate information to the platform.</p>
+        <p>In such circumstances, PlacementHub may process that information on behalf of the institution to provide the services requested by the institution.</p>
+        <p>The institution may determine what information is uploaded, which users can access it, and which placement activities are conducted through the platform.</p>
+      </section>
+
+      <section class="policy-section" id="employers">
+        <h2>6. Information Provided to Employers</h2>
+        <p>Students may choose to apply for jobs, internships or other opportunities through PlacementHub.</p>
+        <p>When a student applies for an opportunity, relevant profile, resume and application information may be made available to the relevant employer or recruiter for recruitment purposes.</p>
+        <p>Users should review the information in their profile before applying for opportunities.</p>
+        <p>PlacementHub does not guarantee that an employer will contact, interview or select any candidate.</p>
+      </section>
+
+      <section class="policy-section" id="cookies">
+        <h2>7. Cookies and Similar Technologies</h2>
+        <p>PlacementHub may use cookies and similar technologies to:</p>
+        <ul>
+          <li>Keep users signed in</li>
+          <li>Maintain security</li>
+          <li>Remember preferences</li>
+          <li>Understand website usage</li>
+          <li>Improve platform performance</li>
+          <li>Analyse usage and technical issues</li>
+        </ul>
+        <p>Users may be able to control cookies through their browser settings. Disabling certain cookies may affect some functionality of the platform.</p>
+      </section>
+
+      <section class="policy-section" id="communications">
+        <h2>8. Communications</h2>
+        <p>We may send service-related communications, including:</p>
+        <ul>
+          <li>Account notifications</li>
+          <li>Application updates</li>
+          <li>Placement drive notifications</li>
+          <li>Security alerts</li>
+          <li>Important platform announcements</li>
+          <li>Support communications</li>
+        </ul>
+        <p>Where applicable and permitted by law, users may also receive promotional or informational communications. Users may opt out of non-essential promotional communications.</p>
+      </section>
+
+      <section class="policy-section" id="security">
+        <h2>9. Data Security</h2>
+        <p>We take reasonable technical and organisational measures to protect information against unauthorised access, alteration, disclosure, loss or destruction.</p>
+        <p>However, no internet-based service can guarantee absolute security. Users should therefore take reasonable precautions when creating passwords and accessing their accounts.</p>
+      </section>
+
+      <section class="policy-section" id="retention">
+        <h2>10. Data Retention</h2>
+        <p>We retain information for as long as reasonably necessary to:</p>
+        <ul>
+          <li>Provide our services</li>
+          <li>Maintain user and institutional accounts</li>
+          <li>Facilitate placement and recruitment activities</li>
+          <li>Meet contractual and operational requirements</li>
+          <li>Resolve disputes</li>
+          <li>Maintain security</li>
+          <li>Comply with applicable legal obligations</li>
+        </ul>
+        <p>When information is no longer reasonably required, we may delete, anonymise or otherwise dispose of it in accordance with applicable requirements and our operational practices.</p>
+      </section>
+
+      <section class="policy-section" id="rights">
+        <h2>11. Your Choices and Rights</h2>
+        <p>Depending on applicable law and the circumstances in which we process your information, you may have rights relating to your personal information, including rights to:</p>
+        <ul>
+          <li>Request access to certain personal information</li>
+          <li>Request correction of inaccurate information</li>
+          <li>Request deletion where applicable</li>
+          <li>Withdraw consent where processing is based on consent</li>
+          <li>Raise concerns regarding the processing of your information</li>
+          <li>Request information about how your personal information is handled</li>
+        </ul>
+        <p>Requests may be submitted to:</p>
+        <p><a href="mailto:support.placementhub@placementhub.online">support.placementhub@placementhub.online</a></p>
+        <p>We may need to verify your identity before processing certain requests.</p>
+        <p>Where information is controlled or provided by an educational institution or employer, we may direct the request to the relevant institution or organisation where appropriate.</p>
+      </section>
+
+      <section class="policy-section" id="third-parties">
+        <h2>12. Third-Party Services</h2>
+        <p>PlacementHub may use third-party services for hosting, communications, analytics, authentication, payments, security, infrastructure or other operational purposes.</p>
+        <p>Such providers may process information on our behalf and may have their own terms and privacy policies.</p>
+        <p>PlacementHub is not responsible for the privacy practices of independent third-party websites or services that are not controlled by us.</p>
+      </section>
+
+      <section class="policy-section" id="links">
+        <h2>13. External Links</h2>
+        <p>Our website or platform may contain links to third-party websites.</p>
+        <p>We are not responsible for the content, security or privacy practices of those websites. Users should review the privacy policies of third-party websites before providing information to them.</p>
+      </section>
+
+      <section class="policy-section" id="children">
+        <h2>14. Children’s and Young Users’ Information</h2>
+        <p>PlacementHub is primarily intended for students, colleges, employers and other users involved in education and recruitment.</p>
+        <p>Where applicable, we will take appropriate measures concerning personal information of children or other users who require additional protections under applicable law.</p>
+        <p>Educational institutions and other organisations using PlacementHub are responsible for ensuring that information they provide to the platform is collected and shared lawfully.</p>
+      </section>
+
+      <section class="policy-section" id="changes">
+        <h2>15. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes to our services, technology, legal requirements or operational practices.</p>
+        <p>The updated version will be published on this page with a revised “Last Updated” date.</p>
+      </section>
+
+      <section class="policy-section" id="contact">
+        <h2>16. Contact Us</h2>
+        <p>If you have questions, concerns or requests regarding this Privacy Policy or the handling of your information, please contact us at:</p>
+        <div class="contact-box">
+          <p class="org">PlacementHub</p>
+          <p>Que Spaces, Awfis</p>
+          <p>Magarpatta, Pune – 411028</p>
+          <p>Maharashtra, India</p>
+          <p style="margin-top: 0.85rem;"><strong>Email:</strong> <a href="mailto:support.placementhub@placementhub.online">support.placementhub@placementhub.online</a></p>
+          <p><strong>Founder:</strong> Sandeep Jain</p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jain35/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jain35</a></p>
+        </div>
+        <p style="margin-top: 1.5rem;">By using PlacementHub after an updated Privacy Policy has been published, you acknowledge the updated policy to the extent permitted by applicable law.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="mark" aria-hidden="true">P</span>
+        PlacementHub
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#resources">Resources</a>
+        <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
+        <a href="index.html#contact">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </nav>
+      <p class="footer-copy">© 2026 PlacementHub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
