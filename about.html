@@ -6,7 +6,8 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <title>About Us — PlacementHub</title>
-  <meta name="description" content="Meet PlacementHub Solutions and founder Sandeep Jain. We build a year-round campus placement platform for students, colleges, and employers." />
+  <meta name="description" content="Meet PlacementHub Solutions and founder Sandeep Jain. PlacementHub is an early-stage campus placement platform based in Pune." />
+  <link rel="canonical" href="https://placementhub.online/about.html" />
   <script>
     (function () {
       try {
@@ -403,23 +404,39 @@
       align-items: center;
       gap: 1.25rem;
     }
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 700;
+    .footer-identity {
+      text-align: center;
+      max-width: 36rem;
     }
-    .footer-brand .mark {
-      display: flex;
-      height: 1.5rem;
-      width: 1.5rem;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.375rem;
-      background: var(--primary-600);
-      color: #fff;
-      font-size: 0.75rem;
+    .footer-org {
+      margin: 0 0 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
+    .footer-operated {
+      margin: 0 0 0.85rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .footer-address {
+      margin: 0;
+      font-style: normal;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .footer-contact-links {
+      margin: 0.75rem 0 0;
+      font-size: 0.875rem;
+    }
+    .footer-contact-links a {
+      color: var(--primary-700);
+      font-weight: 600;
+    }
+    .footer-contact-links a:hover { text-decoration: underline; }
     .footer-nav {
       display: flex;
       flex-wrap: wrap;
@@ -457,6 +474,21 @@
       .wide-band { padding: 3rem 1.25rem; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PlacementHub Solutions",
+    "url": "https://placementhub.online/",
+    "email": "support.placementhub@placementhub.online",
+    "telephone": "+91-724-907-2620",
+    "founder": {
+      "@type": "Person",
+      "name": "Sandeep Jain",
+      "sameAs": "https://www.linkedin.com/in/jain35/"
+    }
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#about">Skip to about</a>
@@ -471,7 +503,7 @@
           <a href="about.html" aria-current="page">About</a>
           <a href="index.html#resources">Resources</a>
           <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
-          <a href="index.html#contact">Contact Us</a>
+          <a href="contact.html">Contact Us</a>
         </nav>
       </div>
     </div>
@@ -481,11 +513,21 @@
     <section class="hero">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-inner">
-        <p class="kicker">About us</p>
+        <p class="kicker">About us · Early-stage SaaS</p>
         <h1>PlacementHub is built for the full student journey, <span>not only placement week</span></h1>
         <p class="hero-lead">
-          PlacementHub Solutions runs a campus placement and industry engagement platform from Pune.
+          PlacementHub is a platform operated by PlacementHub Solutions from Pune, Maharashtra, India.
           We connect students, colleges, and employers in one year-round system, so placements become the outcome of preparation, not a last-minute scramble.
+        </p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="stage-heading">
+      <div class="band-inner">
+        <h2 id="stage-heading">Current stage</h2>
+        <p>
+          PlacementHub is an early-stage SaaS platform currently undergoing testing, pilot deployments, and validation with colleges, students, and employers.
+          We are building a real product for campuses. We are not claiming a large installed base of customers, placements, or average packages until those figures can be independently verified.
         </p>
       </div>
     </section>
@@ -503,6 +545,8 @@
         </p>
         <p>
           PlacementHub provides the technology. Unless we say otherwise, we are not the employer, the college, or the hiring authority for opportunities listed by third parties.
+          We do not guarantee employment, salaries, or placement outcomes, and we do not process candidate salary payments.
+          The platform helps institutions, students, and employers manage and coordinate placement activities.
         </p>
 
         <dl class="serve">
@@ -547,7 +591,7 @@
           </li>
           <li>
             <strong>Analytics</strong>
-            Placement rates, department views, salary trends, and year-over-year comparisons for leadership teams.
+            Drive activity, application funnels, department views, and year-over-year comparisons for leadership teams.
           </li>
           <li>
             <strong>Scheduling</strong>
@@ -578,7 +622,7 @@
           </p>
           <div class="founder-actions">
             <a class="btn btn-primary" href="https://www.linkedin.com/in/jain35/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
-            <a class="btn btn-secondary" href="index.html#contact">Contact PlacementHub</a>
+            <a class="btn btn-secondary" href="contact.html">Contact PlacementHub</a>
           </div>
         </div>
 
@@ -592,6 +636,10 @@
             <div class="pair">
               <dt>Founder</dt>
               <dd>Sandeep Jain</dd>
+            </div>
+            <div class="pair">
+              <dt>Current stage</dt>
+              <dd>Early-stage SaaS. Testing, pilots, and validation with colleges, students, and employers.</dd>
             </div>
             <div class="pair">
               <dt>Headquarters</dt>
@@ -618,27 +666,37 @@
       <div class="cta-inner">
         <h2>Work with PlacementHub</h2>
         <p>If you are a college, employer, or partner looking for a year-round placement system, we would like to hear from you.</p>
-        <a class="btn btn-primary" href="index.html#contact">Get in touch</a>
+        <a class="btn btn-primary" href="contact.html">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="mark" aria-hidden="true">P</span>
-        PlacementHub
+      <div class="footer-identity">
+        <p class="footer-org">PlacementHub Solutions</p>
+        <p class="footer-operated">PlacementHub is a platform operated by PlacementHub Solutions, Pune, Maharashtra, India.</p>
+        <address class="footer-address">
+          Que Spaces, Awfis<br />
+          Magarpatta, Pune – 411028<br />
+          Maharashtra, India
+        </address>
+        <p class="footer-contact-links">
+          <a href="tel:+917249072620">+91 724 907 2620</a>
+          ·
+          <a href="mailto:support.placementhub@placementhub.online">support.placementhub@placementhub.online</a>
+        </p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="index.html#features">Features</a>
         <a href="about.html">About</a>
         <a href="index.html#resources">Resources</a>
         <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
-        <a href="index.html#contact">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms &amp; Conditions</a>
       </nav>
-      <p class="footer-copy">© 2026 PlacementHub. All rights reserved.</p>
+      <p class="footer-copy">© 2026 PlacementHub Solutions. All rights reserved.</p>
     </div>
   </footer>
 </body>

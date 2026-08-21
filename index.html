@@ -6,7 +6,8 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <title>PlacementHub — Beyond Placements. Building Industry-Ready Talent</title>
-  <meta name="description" content="PlacementHub connects students, institutions, employers, mentors, alumni, and industry experts in one year-round campus placement ecosystem." />
+  <meta name="description" content="PlacementHub is an early-stage campus placement platform operated by PlacementHub Solutions, Pune. Built for students, colleges, and employers." />
+  <link rel="canonical" href="https://placementhub.online/" />
   <script>
     // Once per browser session, bypass CDN/browser cache so the latest site is loaded.
     (function () {
@@ -202,27 +203,52 @@
     }
     .hero-actions .btn { padding: 0.875rem 2rem; font-size: 1.125rem; }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 5rem auto 0;
-      padding-top: 3rem;
-      border-top: 1px solid var(--border-default);
+    .stage-note {
+      max-width: 40rem;
+      margin: 2.25rem auto 0;
+      padding: 1.05rem 1.2rem;
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-lg);
+      background: var(--bg-secondary);
+      text-align: left;
     }
-    .stat-value {
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-    }
-    .stat-label {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      margin-top: 0.5rem;
+    .stage-note strong {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      color: var(--primary-700);
+      margin-bottom: 0.3rem;
+    }
+    .stage-note p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .audience {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.75rem;
+      max-width: 1000px;
+      margin: 4.5rem auto 0;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border-default);
+      text-align: left;
+    }
+    .audience h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .audience p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    @media (max-width: 720px) {
+      .audience { grid-template-columns: 1fr; gap: 1.25rem; }
     }
 
     .section {
@@ -692,23 +718,39 @@
       align-items: center;
       gap: 1.25rem;
     }
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 700;
+    .footer-identity {
+      text-align: center;
+      max-width: 36rem;
     }
-    .footer-brand .mark {
-      display: flex;
-      height: 1.5rem;
-      width: 1.5rem;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.375rem;
-      background: var(--primary-600);
-      color: #fff;
-      font-size: 0.75rem;
+    .footer-org {
+      margin: 0 0 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
+    .footer-operated {
+      margin: 0 0 0.85rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .footer-address {
+      margin: 0;
+      font-style: normal;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .footer-contact-links {
+      margin: 0.75rem 0 0;
+      font-size: 0.875rem;
+    }
+    .footer-contact-links a {
+      color: var(--primary-700);
+      font-weight: 600;
+    }
+    .footer-contact-links a:hover { text-decoration: underline; }
     .footer-nav {
       display: flex;
       flex-wrap: wrap;
@@ -741,6 +783,30 @@
       .resource-list { grid-template-columns: 1fr; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PlacementHub Solutions",
+    "legalName": "PlacementHub Solutions",
+    "url": "https://placementhub.online/",
+    "email": "support.placementhub@placementhub.online",
+    "telephone": "+91-724-907-2620",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Que Spaces, Awfis, Magarpatta",
+      "addressLocality": "Pune",
+      "postalCode": "411028",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Sandeep Jain",
+      "sameAs": "https://www.linkedin.com/in/jain35/"
+    }
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -754,7 +820,7 @@
           <a href="about.html">About</a>
           <a href="#resources">Resources</a>
           <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
-          <a href="#contact">Contact Us</a>
+          <a href="contact.html">Contact Us</a>
         </nav>
       </div>
     </div>
@@ -764,7 +830,7 @@
     <section class="hero">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-inner">
-        <div class="pill">✦ More than a placement platform</div>
+        <div class="pill">Early-stage campus placement platform</div>
         <h1>
           Beyond Placements.<br />
           <span class="accent">Building Industry-Ready Talent</span>
@@ -776,25 +842,30 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#features">Explore Features</a>
+          <a class="btn btn-secondary" href="contact.html">Talk to us</a>
         </div>
+        <aside class="stage-note">
+          <strong>Current stage</strong>
+          <p>PlacementHub is an early-stage SaaS platform currently undergoing testing, pilot deployments, and validation with colleges, students, and employers.</p>
+        </aside>
+        <aside class="stage-note" style="margin-top: 0.85rem;">
+          <strong>What we provide</strong>
+          <p>PlacementHub does not guarantee employment, salaries, or placement outcomes, and it does not process candidate salary payments. It provides technology to help institutions, students, and employers manage and coordinate placement activities.</p>
+        </aside>
       </div>
 
-      <div class="stats" aria-label="Platform highlights">
+      <div class="audience" aria-label="Who PlacementHub is built for">
         <div>
-          <div class="stat-value" style="color: var(--primary-600)">500+</div>
-          <div class="stat-label">Colleges</div>
+          <h3>For Students</h3>
+          <p>Profile, resume, jobs, internships, projects, and applications in one place.</p>
         </div>
         <div>
-          <div class="stat-value" style="color: #0EA5E9">10K+</div>
-          <div class="stat-label">Students Placed</div>
+          <h3>For Colleges</h3>
+          <p>Placement management, student records, eligibility rules, drives, employers, and reports.</p>
         </div>
         <div>
-          <div class="stat-value" style="color: var(--primary-600)">200+</div>
-          <div class="stat-label">Employers</div>
-        </div>
-        <div>
-          <div class="stat-value" style="color: #10B981">₹12L</div>
-          <div class="stat-label">Avg. Package</div>
+          <h3>For Employers</h3>
+          <p>Campus hiring, job posting, eligibility filters, candidate pipeline, and interview management.</p>
         </div>
       </div>
     </section>
@@ -814,6 +885,11 @@
             just during the recruitment season. By bringing all stakeholders onto a single platform, we enable meaningful
             interactions, experiential learning, mentoring, internships, skill development, industry projects, hackathons,
             assessments, and career guidance that prepare students for the workplace.
+          </p>
+          <p>
+            PlacementHub is SaaS software operated by PlacementHub Solutions. We do not guarantee employment, salaries, or
+            placement outcomes, and we do not handle candidate salary or offer payments. Hiring decisions remain with employers;
+            institutional policy remains with colleges.
           </p>
           <p>
             Our vision is to transform placements from a seasonal activity into a
@@ -896,7 +972,7 @@
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">📊</div>
             <h3>Real-time Analytics</h3>
-            <p>Placement rates, salary trends, department-wise stats, employer reliability scores, and year-over-year comparisons.</p>
+            <p>Drive activity, application funnels, department-wise reporting, and year-over-year comparisons for placement teams.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">📅</div>
@@ -1535,20 +1611,30 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="mark" aria-hidden="true">P</span>
-        PlacementHub
+      <div class="footer-identity">
+        <p class="footer-org">PlacementHub Solutions</p>
+        <p class="footer-operated">PlacementHub is a platform operated by PlacementHub Solutions, Pune, Maharashtra, India.</p>
+        <address class="footer-address">
+          Que Spaces, Awfis<br />
+          Magarpatta, Pune – 411028<br />
+          Maharashtra, India
+        </address>
+        <p class="footer-contact-links">
+          <a href="tel:+917249072620">+91 724 907 2620</a>
+          ·
+          <a href="mailto:support.placementhub@placementhub.online">support.placementhub@placementhub.online</a>
+        </p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#features">Features</a>
         <a href="about.html">About</a>
         <a href="#resources">Resources</a>
         <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
-        <a href="#contact">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms &amp; Conditions</a>
       </nav>
-      <p class="footer-copy">© 2026 PlacementHub. All rights reserved.</p>
+      <p class="footer-copy">© 2026 PlacementHub Solutions. All rights reserved.</p>
     </div>
   </footer>
 
