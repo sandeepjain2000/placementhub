@@ -6,12 +6,37 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://placementhub.online/about.html</loc>
+    <loc>https://placementhub.online/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://placementhub.online/contact.html</loc>
+    <loc>https://placementhub.online/platform/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://placementhub.online/students/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://placementhub.online/colleges/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://placementhub.online/employers/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://placementhub.online/resources/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://placementhub.online/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
