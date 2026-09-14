@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "nanobanana-ppt-skills": {
+      "source": "sickn33/agentic-awesome-skills",
+      "sourceType": "github",
+      "skillPath": "skills/nanobanana-ppt-skills/SKILL.md",
+      "computedHash": "be6f029e370c809976dc8f6040b2346717568c5e694a38cb12addd9f61adbd2d"
+    }
+  }
+}
