@@ -935,6 +935,16 @@
 .page-hero--visual .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+.page-hero--visual .hero-credit {
+  margin: 1.25rem 0 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+.page-hero--visual .hero-credit a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 .band { padding: 0 1.5rem 4.5rem; }
 .band-inner { max-width: 46rem; margin: 0 auto; }
