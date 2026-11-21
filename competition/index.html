@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/competition.css" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -37,363 +38,313 @@
           <a href="/resources/">Resources</a>
           <a href="/competition/" aria-current="page">Competition</a>
           <a href="/contact/">Contact</a>
-          <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
         </nav>
       </div>
     </div>
   </header>
-  <main id="content">
-    <section class="page-hero page-hero--visual">
-      <img
-        class="page-hero-media"
-        src="/images/competition-hero.jpg"
-        alt="Diverse professionals smiling as two colleagues shake hands across a conference table"
-        width="2056"
-        height="765"
-        fetchpriority="high"
-      />
-      <div class="page-hero-scrim" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <p class="kicker">Inter-college · Online · Free to participate</p>
-        <h1>Business Case Competition — <span>Turn Ideas into Impact</span></h1>
-        <p class="hero-lead">
-          PlacementHub invites your institution to a free online competition where UG/PG students identify real-world problems and build practical, financially viable business solutions.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#register">College registration steps</a>
-          <a class="btn btn-secondary btn-wide" href="#downloads">Download brief, decks &amp; student import file</a>
-          <a class="btn btn-secondary" href="#glance">Competition at a glance</a>
-          <a class="btn btn-secondary" href="#key-dates">Key dates</a>
-          <a class="btn btn-secondary" href="#requirements">Requirements</a>
-          <a class="btn btn-secondary" href="#evaluation">Evaluation process</a>
+  <main id="content" class="comp-page">
+    <section class="comp-hero">
+      <div class="comp-hero-inner">
+        <div class="comp-hero-copy">
+          <p class="comp-kicker">Inter-college · Online · Free to participate</p>
+          <h1>Business Case Competition — <span>Turn Ideas into Impact</span></h1>
+          <p class="comp-hero-lead">
+            PlacementHub invites your institution to a free online competition where UG/PG students identify real-world problems and build practical, financially viable business solutions.
+          </p>
+          <p class="comp-hero-deadline">College registration deadline: <strong>23 Nov 2026</strong></p>
+          <div class="comp-hero-actions">
+            <a class="btn btn-primary" href="#register">College registration steps →</a>
+            <a class="btn btn-secondary" href="#downloads">Download competition brief</a>
+          </div>
+          <nav class="comp-hero-jumps" aria-label="On this page">
+            <a href="#glance">Competition at a glance</a>
+            <a href="#key-dates">Key dates</a>
+            <a href="#requirements">Requirements</a>
+            <a href="#evaluation">Evaluation process</a>
+          </nav>
+        </div>
+        <div class="comp-hero-visual">
+          <img
+            src="/images/competition-hero.jpg"
+            alt="Diverse professionals smiling as two colleagues shake hands across a conference table"
+            width="2056"
+            height="765"
+            fetchpriority="high"
+          />
         </div>
       </div>
     </section>
 
-    <section class="band">
-      <div class="band-inner">
-        <h2>Invitation to colleges</h2>
-        <p>
-          We are inviting only <strong>10 colleges</strong>, with places on a first-come, first-served basis.
-          Each college may field a maximum of <strong>five teams</strong>. Participation is completely free.
-        </p>
-        <ul class="comp-highlights">
+    <section class="comp-strip" aria-label="Invitation highlights">
+      <div class="comp-strip-inner">
+        <p class="comp-strip-label">Invitation to colleges</p>
+        <ul class="comp-strip-items">
           <li>
-            <span class="comp-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg>
-            </span>
-            <span>10 colleges only</span>
+            <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg></span>
+            10 colleges only
           </li>
           <li>
-            <span class="comp-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </span>
-            <span>5 teams per college</span>
+            <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            5 teams per college
           </li>
           <li>
-            <span class="comp-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            </span>
-            <span>Free to participate</span>
+            <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Free to participate
           </li>
         </ul>
-        <p>
-          Students from all disciplines can demonstrate problem-solving, entrepreneurial thinking, and the ability to turn ideas into viable business concepts.
-        </p>
       </div>
     </section>
 
-    <section class="wide-band" id="glance" aria-labelledby="glance-heading">
-      <div class="wide-inner">
-        <h2 id="glance-heading">Competition at a glance</h2>
-        <p class="wide-lead">Everything TPOs and students need to know before registering.</p>
-        <dl class="comp-glance">
-          <div class="comp-glance-item">
-            <dt>
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
-              Eligibility
-            </dt>
-            <dd>UG/PG students across all disciplines</dd>
-          </div>
-          <div class="comp-glance-item">
-            <dt>
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-              Team size
-            </dt>
-            <dd>3 students per team</dd>
-          </div>
-          <div class="comp-glance-item">
-            <dt>
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
-              Maximum teams
-            </dt>
-            <dd>5 teams per college</dd>
-          </div>
-          <div class="comp-glance-item">
-            <dt>
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
-              Format
-            </dt>
-            <dd>Fully online</dd>
-          </div>
-          <div class="comp-glance-item">
-            <dt>
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
-              College registration
-            </dt>
-            <dd>23 Nov 2026</dd>
-          </div>
-          <div class="comp-glance-item">
-            <dt>
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15h6"/></svg></span>
-              Submission
-            </dt>
-            <dd>30 Nov 2026</dd>
-          </div>
-          <div class="comp-glance-item">
-            <dt>
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M10 9l4 2.5L10 14z"/></svg></span>
-              Presentations
-            </dt>
-            <dd>1–7 Dec 2026</dd>
-          </div>
-          <div class="comp-glance-item">
-            <dt>
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-              Fee
-            </dt>
-            <dd>Free for colleges and students</dd>
-          </div>
-        </dl>
+    <section class="comp-section" id="glance">
+      <div class="comp-wrap">
+        <h2 class="comp-title">Competition at a glance</h2>
+        <p class="comp-lead">Everything TPOs and students need to know before registering.</p>
+        <div class="comp-glance-grid">
+          <article class="comp-card">
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+            <h3>Eligibility</h3>
+            <p>UG/PG students across all disciplines</p>
+          </article>
+          <article class="comp-card">
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3>Team size</h3>
+            <p>3 students per team</p>
+          </article>
+          <article class="comp-card">
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
+            <h3>Maximum teams</h3>
+            <p>5 teams per college</p>
+          </article>
+          <article class="comp-card">
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span>
+            <h3>Format</h3>
+            <p>Fully online</p>
+          </article>
+          <article class="comp-card">
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
+            <h3>College registration</h3>
+            <p>23 Nov 2026</p>
+          </article>
+          <article class="comp-card">
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+            <h3>Submission</h3>
+            <p>30 Nov 2026</p>
+          </article>
+          <article class="comp-card">
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
+            <h3>Presentations</h3>
+            <p>1–7 Dec 2026</p>
+          </article>
+          <article class="comp-card">
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4A7 7 0 1 1 10.6 3.4"/><path d="M12 8v4l2.5 1.5"/><path d="m16 3 5 1-1 5"/></svg></span>
+            <h3>Participation fee</h3>
+            <p>Free for colleges and students</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="band" id="key-dates">
-      <div class="band-inner">
-        <h2>Key dates</h2>
-        <ol class="comp-timeline">
+    <section class="comp-section comp-section--muted" id="key-dates">
+      <div class="comp-wrap">
+        <h2 class="comp-title">Key dates</h2>
+        <ol class="comp-h-timeline">
           <li>
-            <span class="comp-timeline-date">
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
-              14 Nov 2026
-            </span>
-            <span class="comp-timeline-label">Online clarification session for interested colleges</span>
+            <span class="comp-h-timeline-dot" aria-hidden="true"></span>
+            <article class="comp-h-timeline-card">
+              <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
+              <p class="comp-h-timeline-date">14 Nov 2026</p>
+              <p class="comp-h-timeline-label">Online clarification session for interested colleges</p>
+            </article>
           </li>
           <li>
-            <span class="comp-timeline-date">
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
-              23 Nov 2026
-            </span>
-            <span class="comp-timeline-label">College registration deadline</span>
+            <span class="comp-h-timeline-dot" aria-hidden="true"></span>
+            <article class="comp-h-timeline-card">
+              <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
+              <p class="comp-h-timeline-date">23 Nov 2026</p>
+              <p class="comp-h-timeline-label">College registration deadline</p>
+            </article>
           </li>
           <li>
-            <span class="comp-timeline-date">
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
-              30 Nov 2026
-            </span>
-            <span class="comp-timeline-label">Team presentation submissions due</span>
+            <span class="comp-h-timeline-dot" aria-hidden="true"></span>
+            <article class="comp-h-timeline-card">
+              <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
+              <p class="comp-h-timeline-date">30 Nov 2026</p>
+              <p class="comp-h-timeline-label">Team presentation submissions due</p>
+            </article>
           </li>
           <li>
-            <span class="comp-timeline-date">
-              <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
-              1–7 Dec 2026
-            </span>
-            <span class="comp-timeline-label">Online presentations, assessment, and Q&amp;A</span>
+            <span class="comp-h-timeline-dot" aria-hidden="true"></span>
+            <article class="comp-h-timeline-card">
+              <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
+              <p class="comp-h-timeline-date">1–7 Dec 2026</p>
+              <p class="comp-h-timeline-label">Online presentations, assessment, and Q&amp;A</p>
+            </article>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="band" id="requirements">
-      <div class="band-inner">
-        <h2>Submission requirements</h2>
-        <div class="comp-callout">
-          <span class="comp-ico comp-ico--lg" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><path d="M8 9h8M8 13h5"/></svg>
-          </span>
-          <div>
-            <p>
-              Each team must submit a presentation that strictly follows the PowerPoint template provided by PlacementHub.
-              The PowerPoint template for your submission is available in the next section under <strong>Competition Resources</strong>.
-            </p>
-            <p>A video recording is optional.</p>
+    <section class="comp-section" id="requirements">
+      <div class="comp-wrap">
+        <h2 class="comp-title">Submission requirements</h2>
+        <div class="comp-req-banner">
+          <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M8 9h8M8 13h5"/></svg></span>
+          <div class="comp-req-list">
+            <div class="comp-req-item">
+              <span class="comp-req-badge">Required</span>
+              <p>Each team must submit a presentation that strictly follows the PowerPoint template provided by PlacementHub. The template is available under <a href="#downloads">Competition resources</a>.</p>
+            </div>
+            <div class="comp-req-item">
+              <span class="comp-req-badge comp-req-badge--optional">Optional</span>
+              <p>A video recording may accompany the presentation.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="wide-band" id="downloads" aria-labelledby="resources-heading">
-      <div class="wide-inner">
-        <h2 id="resources-heading">Competition resources</h2>
-        <p class="wide-lead">
-          Download the competition brief, presentation materials, and college import template.
-        </p>
+    <section class="comp-section comp-section--muted" id="downloads">
+      <div class="comp-wrap">
+        <h2 class="comp-title">Competition resources</h2>
+        <p class="comp-lead">Download the competition brief, presentation materials, and college import template.</p>
         <div class="comp-resources">
-          <a
-            class="comp-resource"
-            href="/uploaded/Business_Case_Competition_Brief_V1.pdf"
-            download="Business_Case_Competition_Brief_V1.pdf"
-          >
+          <a class="comp-resource" href="/uploaded/Business_Case_Competition_Brief_V1.pdf" download="Business_Case_Competition_Brief_V1.pdf">
             <span class="comp-resource-icon comp-resource-icon--pdf" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
-                <path d="M14 2v6h6"/>
-                <path d="M9.5 13h5M9.5 17h5M9.5 9h2"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9.5 13h5M9.5 17h5M9.5 9h2"/></svg>
             </span>
             <span class="comp-resource-body">
               <span class="comp-resource-type">PDF</span>
               <strong>Competition Brief</strong>
               <span>Full brief for colleges and teams</span>
+              <span class="comp-resource-dl">Download ↓</span>
             </span>
           </a>
-          <a
-            class="comp-resource"
-            href="/uploaded/PlacementHub_Actions_Staff_Students.pptx"
-            download="PlacementHub_Actions_Staff_Students.pptx"
-          >
+          <a class="comp-resource" href="/uploaded/PlacementHub_Actions_Staff_Students.pptx" download="PlacementHub_Actions_Staff_Students.pptx">
             <span class="comp-resource-icon comp-resource-icon--pptx" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="14" rx="2"/>
-                <path d="M8 21h8M12 18v3"/>
-                <path d="M8 9.5h3.2a1.6 1.6 0 0 1 0 3.2H8V8"/>
-                <path d="M14.5 15V9h2.2a1.5 1.5 0 0 1 0 3H14.5"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><path d="M8 9.5h3.2a1.6 1.6 0 0 1 0 3.2H8V8"/></svg>
             </span>
             <span class="comp-resource-body">
               <span class="comp-resource-type">PPTX</span>
               <strong>Actions for Staff &amp; Students</strong>
               <span>Steps and guidance for campus teams</span>
+              <span class="comp-resource-dl">Download ↓</span>
             </span>
           </a>
-          <a
-            class="comp-resource"
-            href="/uploaded/PlacementHub_Investor_with_Business_Model_Canvas.pptx"
-            download="PlacementHub_Investor_with_Business_Model_Canvas.pptx"
-          >
+          <a class="comp-resource" href="/uploaded/PlacementHub_Investor_with_Business_Model_Canvas.pptx" download="PlacementHub_Investor_with_Business_Model_Canvas.pptx">
             <span class="comp-resource-icon comp-resource-icon--pptx" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="14" rx="2"/>
-                <path d="M8 21h8M12 18v3"/>
-                <path d="M7.5 14V9h2.4a1.6 1.6 0 1 1 0 3.2H7.5"/>
-                <path d="M13 9v5M13 9h2.8a1.5 1.5 0 0 1 0 3H13"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><path d="M7.5 14V9h2.4a1.6 1.6 0 1 1 0 3.2H7.5"/></svg>
             </span>
             <span class="comp-resource-body">
               <span class="comp-resource-type">PPTX</span>
               <strong>Investor Deck &amp; Business Model Canvas</strong>
               <span>Reference deck for building the business case</span>
+              <span class="comp-resource-dl">Download ↓</span>
             </span>
           </a>
-          <a
-            class="comp-resource"
-            href="/uploaded/students_import_template1.csv"
-            download="students_import_template1.csv"
-          >
+          <a class="comp-resource" href="/uploaded/students_import_template1.csv" download="students_import_template1.csv">
             <span class="comp-resource-icon comp-resource-icon--csv" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
-                <path d="M14 2v6h6"/>
-                <path d="M8 12h8M8 15h8M8 18h5"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 12h8M8 15h8M8 18h5"/></svg>
             </span>
             <span class="comp-resource-body">
               <span class="comp-resource-type">CSV</span>
               <strong>Students Import Template</strong>
               <span>CSV template for college student import</span>
+              <span class="comp-resource-dl">Download ↓</span>
             </span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="band" id="evaluation">
-      <div class="band-inner">
-        <h2>Competition and evaluation process</h2>
-        <p>The competition follows a two-stage process:</p>
-        <div class="comp-process">
-          <div class="comp-process-item">
-            <span class="comp-ico comp-ico--lg" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg>
-            </span>
-            <div>
-              <strong>Initial screening</strong>
-              <p>Submitted presentations are screened to shortlist teams.</p>
-            </div>
+    <section class="comp-section" id="evaluation">
+      <div class="comp-wrap">
+        <h2 class="comp-title">Competition and evaluation process</h2>
+        <div class="comp-eval-grid">
+          <div class="comp-eval-stages">
+            <article class="comp-process-item">
+              <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></span>
+              <div>
+                <strong>Initial screening</strong>
+                <p>Submitted presentations are screened to shortlist teams.</p>
+              </div>
+            </article>
+            <article class="comp-process-item">
+              <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11h-6M19 8v6"/></svg></span>
+              <div>
+                <strong>Final presentations</strong>
+                <p>Shortlisted teams present online, followed by Q&amp;A with industry experts.</p>
+              </div>
+            </article>
           </div>
-          <div class="comp-process-item">
-            <span class="comp-ico comp-ico--lg" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11h-6M19 8v6"/></svg>
-            </span>
-            <div>
-              <strong>Final presentations</strong>
-              <p>Shortlisted teams present their business cases online, followed by a Q&amp;A with industry experts.</p>
-            </div>
-          </div>
+          <aside class="comp-criteria">
+            <h3>Evaluation criteria</h3>
+            <ul>
+              <li>Originality</li>
+              <li>Problem relevance</li>
+              <li>Practicality</li>
+              <li>Business viability</li>
+              <li>Financial considerations</li>
+              <li>Potential impact</li>
+            </ul>
+          </aside>
         </div>
-        <p>
-          Entries are evaluated on originality, problem relevance, practicality, business viability, financial considerations, and potential impact.
-        </p>
       </div>
     </section>
 
-    <section class="wide-band" aria-labelledby="prizes-heading">
-      <div class="wide-inner">
-        <h2 id="prizes-heading">Cash prizes and recognition</h2>
-        <p class="wide-lead">Winning teams and their colleges receive special recognition on PlacementHub’s LinkedIn page.</p>
-        <div class="comp-prizes">
-          <div class="comp-prize">
-            <span class="comp-prize-icon comp-prize-icon--gold" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="9" r="5.25"/>
-                <path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5"/>
-                <path d="M10.25 8.25h3.5M12 7v2.5"/>
-              </svg>
-            </span>
-            <p class="comp-prize-place">First prize</p>
-            <p class="comp-prize-amount">₹5,000</p>
+    <section class="comp-section comp-section--muted" id="prizes" aria-labelledby="prizes-heading">
+      <div class="comp-wrap">
+        <h2 class="comp-title" id="prizes-heading">Cash prizes and recognition</h2>
+        <p class="comp-lead">Winning teams and their colleges receive special recognition on PlacementHub’s LinkedIn page.</p>
+        <div class="comp-prizes-layout">
+          <div class="comp-prizes">
+            <div class="comp-prize">
+              <span class="comp-prize-icon comp-prize-icon--gold" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 4H4a2 2 0 0 0 2 5M17 4h3a2 2 0 0 1-2 5"/></svg>
+              </span>
+              <p class="comp-prize-place">First prize</p>
+              <p class="comp-prize-amount">₹5,000</p>
+            </div>
+            <div class="comp-prize">
+              <span class="comp-prize-icon comp-prize-icon--silver" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 4H4a2 2 0 0 0 2 5M17 4h3a2 2 0 0 1-2 5"/></svg>
+              </span>
+              <p class="comp-prize-place">Second prize</p>
+              <p class="comp-prize-amount">₹3,000</p>
+            </div>
+            <div class="comp-prize">
+              <span class="comp-prize-icon comp-prize-icon--bronze" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 4H4a2 2 0 0 0 2 5M17 4h3a2 2 0 0 1-2 5"/></svg>
+              </span>
+              <p class="comp-prize-place">Third prize</p>
+              <p class="comp-prize-amount">₹2,000</p>
+            </div>
           </div>
-          <div class="comp-prize">
-            <span class="comp-prize-icon comp-prize-icon--silver" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="9" r="5.25"/>
-                <path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5"/>
-                <path d="M10.5 9h3"/>
-              </svg>
-            </span>
-            <p class="comp-prize-place">Second prize</p>
-            <p class="comp-prize-amount">₹3,000</p>
-          </div>
-          <div class="comp-prize">
-            <span class="comp-prize-icon comp-prize-icon--bronze" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="9" r="5.25"/>
-                <path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5"/>
-                <path d="M10.75 8.25h2.5v2.5h-2.5z"/>
-              </svg>
-            </span>
-            <p class="comp-prize-place">Third prize</p>
-            <p class="comp-prize-amount">₹2,000</p>
-          </div>
+          <aside class="comp-cert-note">
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></span>
+            <p>
+              Students who successfully participate receive certificates. On request, certificates can also be provided to participating colleges for NAAC and NBA documentation.
+              Winners will be announced on
+              <a href="https://www.linkedin.com/company/placementhubonline/" target="_blank" rel="noopener noreferrer">PlacementHub on LinkedIn</a>.
+            </p>
+          </aside>
         </div>
-        <p class="comp-prize-note">
-          Students who successfully participate receive certificates. On request, certificates can also be provided to participating colleges for institutional records and accreditation documentation, including NAAC and NBA profiles.
-          Winners will be announced on
-          <a href="https://www.linkedin.com/company/placementhubonline/" target="_blank" rel="noopener noreferrer">PlacementHub on LinkedIn</a>.
-        </p>
       </div>
     </section>
 
-    <section class="band" id="register">
-      <div class="band-inner">
-        <h2>College registration and participation</h2>
-        <p>
+    <section class="comp-section comp-section--register" id="register">
+      <div class="comp-wrap">
+        <h2 class="comp-title">College registration and participation</h2>
+        <p class="comp-lead">
           College registration must be initiated by the Training and Placement Officer (TPO) only, and must be completed before student participation is arranged.
         </p>
-        <ol class="comp-steps">
+        <ol class="comp-flow">
           <li>
+            <span class="comp-flow-num">1</span>
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span>
             <strong>Create or activate your college account</strong>
-            <a href="https://app.placementhub.online/register" target="_blank" rel="noopener noreferrer">PlacementHub — Campus Placement &amp; Engagement Platform</a>
+            <p>
+              <a href="https://app.placementhub.online/register" target="_blank" rel="noopener noreferrer">PlacementHub — Campus Placement &amp; Engagement Platform</a>
+            </p>
             <ol class="comp-substeps">
               <li>Click on College Admin.</li>
               <li>Solve captcha.</li>
@@ -404,67 +355,48 @@
             <p class="comp-step-note">Please notify the PlacementHub team once these steps have been completed so that the administrator can authenticate your account.</p>
           </li>
           <li>
+            <span class="comp-flow-num">2</span>
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
             <strong>Complete account linking</strong>
-            Work with PlacementHub Solutions to finish partnership and account-linking.
+            <p>Work with PlacementHub Solutions to finish partnership and account-linking.</p>
           </li>
           <li>
+            <span class="comp-flow-num">3</span>
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
             <strong>Review the competition</strong>
-            Once the account is linked, the published competition is shared with the college for review.
+            <p>Once the account is linked, the published competition is shared with the college for review.</p>
           </li>
           <li>
+            <span class="comp-flow-num">4</span>
+            <span class="comp-card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></span>
             <strong>Approve for campus</strong>
-            Log in to the college dashboard, open Internships &amp; Programs, review the listing, and select Approve for campus.
+            <p>Log in to the college dashboard, open Internships &amp; Programs, review the listing, and select Approve for campus.</p>
           </li>
         </ol>
-        <p>
+        <p class="comp-flow-footer">
           After registration and campus approval, PlacementHub will guide the TPO through the remaining participation steps.
         </p>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="band-inner">
-        <h2>Online college clarification session</h2>
-        <div class="comp-callout">
-          <span class="comp-ico comp-ico--lg" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.55-2.28A1 1 0 0 1 21 8.62v6.76a1 1 0 0 1-1.45.9L15 14M4 7h9a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
-          </span>
-          <div>
-            <p>
-              An online clarification session for interested colleges is scheduled for <strong>14 Nov 2026</strong>.
-              TPOs can email us to request the session details and clarify questions about the competition and participation process.
-            </p>
-            <p>
-              <a class="btn btn-secondary" href="mailto:support@placementhub.online?subject=Clarification%20Session%2014%20Nov%202026%20-%20Business%20Case%20Competition">Request session details</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-cta">
-      <div class="cta-inner">
-        <h2>Get in touch</h2>
-        <p>
-          For registration assistance, questions, or clarification, contact PlacementHub.
-          Places are limited to 10 colleges on a first-come, first-served basis.
-        </p>
-        <div class="comp-contact">
-          <p>
-            <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-            <a href="mailto:support@placementhub.online">support@placementhub.online</a>
-          </p>
-          <p>
-            <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-            <a href="mailto:placementhubsupport@gmail.com">placementhubsupport@gmail.com</a>
-          </p>
-          <p>
-            <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-            WhatsApp only: <a href="https://wa.me/917249072620">7249072620</a>
-          </p>
-        </div>
-        <div class="founder-actions">
+        <p class="comp-flow-cta">
           <a class="btn btn-primary" href="mailto:support@placementhub.online?subject=Business%20Case%20Competition%20-%20College%20Registration">Register interest</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="comp-help">
+      <div class="comp-wrap comp-help-inner">
+        <div>
+          <h2>Need help?</h2>
+          <p>For registration assistance, questions, or clarification, contact PlacementHub. Places are limited to 10 colleges on a first-come, first-served basis.</p>
+        </div>
+        <div class="comp-help-contacts">
+          <a href="mailto:support@placementhub.online">
+            <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            support@placementhub.online
+          </a>
+          <a href="https://wa.me/917249072620">
+            <span class="comp-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            WhatsApp: 7249072620
+          </a>
           <a class="btn btn-secondary" href="/contact/">Contact form</a>
         </div>
       </div>

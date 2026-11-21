@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -31,75 +32,130 @@
           <a href="/resources/">Resources</a>
           <a href="/competition/">Competition</a>
           <a href="/contact/">Contact</a>
-          <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
         </nav>
       </div>
     </div>
   </header>
-  <main id="content">
-    <section class="page-hero">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <p class="kicker">Platform · Features</p>
-        <h1>One operating system for the <span>full campus journey</span></h1>
-        <p class="hero-lead">From internships and hackathons to drives and offers—every program runs on shared profiles, college policy, and real-time visibility.</p>
+  <main id="content" class="ph-page">
+    <section class="ph-hero">
+      <div class="ph-hero-inner">
+        <div class="ph-hero-copy">
+          <p class="ph-kicker">Platform &amp; features</p>
+          <h1>One operating system for the <span>full campus journey</span></h1>
+          <p class="ph-hero-lead">From internships and hackathons to drives and offers—every program runs on shared profiles, college policy, and real-time visibility.</p>
+          <div class="ph-hero-actions">
+            <a class="btn btn-primary" href="/contact/">Request a demo →</a>
+            <a class="btn btn-secondary" href="#features">Explore features</a>
+          </div>
+        </div>
+        <div class="ph-hero-visual">
+          <img src="/images/chart.png" alt="PlacementHub ecosystem diagram" width="960" height="540" fetchpriority="high" />
+        </div>
       </div>
     </section>
-    <section class="section">
-      <div class="section-wide">
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🎓</div>
+
+    <section class="ph-section" id="features">
+      <div class="ph-wrap">
+        <h2 class="ph-title">Key platform features</h2>
+        <p class="ph-lead">Six capabilities that turn placement activity into a shared operating system for campuses.</p>
+        <div class="ph-grid-3">
+          <article class="ph-card">
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
             <h3>Student Portal</h3>
             <p>Complete profile management, resume builder, skill tracking, document uploads, and one-click applications.</p>
           </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🏢</div>
+          <article class="ph-card">
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
             <h3>Employer Dashboard</h3>
             <p>Post jobs, set eligibility criteria, schedule drives, manage hiring pipelines, and publish offers.</p>
           </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🏫</div>
+          <article class="ph-card">
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg></span>
             <h3>College Management</h3>
             <p>Verify students, configure placement rules, manage calendars, approve employers, and generate reports.</p>
           </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">📊</div>
+          <article class="ph-card">
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 15v4M12 11v8M16 7v12"/></svg></span>
             <h3>Real-time Analytics</h3>
-            <p>Drive activity, application funnels, department-wise reporting, and year-over-year comparisons for placement teams.</p>
+            <p>Drive activity, application funnels, department-wise reporting, and year-over-year comparisons.</p>
           </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">📅</div>
+          <article class="ph-card">
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
             <h3>Smart Scheduling</h3>
             <p>Calendar integration, conflict detection, academic blocking, buffer days, and facility booking.</p>
           </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🛡️</div>
-            <h3>Multi-Tenant &amp; Secure</h3>
+          <article class="ph-card">
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <h3>Multi-Tenant Security</h3>
             <p>Complete data isolation, role-based access, audit logs, and enterprise-grade security for every college.</p>
           </article>
         </div>
       </div>
     </section>
-    <section class="wide-band">
-      <div class="wide-inner">
-        <h2>The platform in practice</h2>
-        <p class="wide-lead">One shared record of the student, the college’s policy, and the employer’s process. That is what turns placement activity into a system.</p>
-        <ul class="does-list">
-          <li><strong>Student portal</strong> Profiles, resume builder, skill tracking, documents, and one-click applications.</li>
-          <li><strong>College management</strong> Student verification, placement rules, academic calendars, employer approvals, and reporting.</li>
-          <li><strong>Employer dashboard</strong> Job and internship listings, eligibility filters, drive scheduling, pipelines, and offers.</li>
-          <li><strong>Analytics</strong> Drive activity, application funnels, department views, and year-over-year comparisons.</li>
-          <li><strong>Scheduling</strong> Drive calendars, conflict detection, academic blocking, and facility booking.</li>
-          <li><strong>Security</strong> Multi-tenant isolation, role-based access, and audit logs so each institution’s data stays its own.</li>
-        </ul>
+
+    <section class="ph-section ph-section--muted">
+      <div class="ph-wrap">
+        <h2 class="ph-title">How the portals work together</h2>
+        <p class="ph-lead">One shared record of the student, the college’s policy, and the employer’s process.</p>
+        <div class="ph-grid-3">
+          <article class="ph-card">
+            <h3>Student portal</h3>
+            <p>Profiles, resume builder, skill tracking, documents, and one-click applications.</p>
+          </article>
+          <article class="ph-card">
+            <h3>College management</h3>
+            <p>Student verification, placement rules, academic calendars, employer approvals, and reporting.</p>
+          </article>
+          <article class="ph-card">
+            <h3>Employer dashboard</h3>
+            <p>Job and internship listings, eligibility filters, drive scheduling, pipelines, and offers.</p>
+          </article>
+        </div>
       </div>
     </section>
-    <section class="page-cta">
-      <div class="cta-inner">
-        <h2>See PlacementHub in a pilot</h2>
-        <p>We are validating the platform with colleges, students, and employers. Tell us about your campus or hiring team.</p>
-        <a class="btn btn-primary" href="/contact/">Talk to us</a>
+
+    <section class="ph-section">
+      <div class="ph-wrap">
+        <h2 class="ph-title">How it works</h2>
+        <p class="ph-lead">A simple product workflow from onboarding to hiring.</p>
+        <ol class="ph-flow">
+          <li>
+            <span class="ph-flow-num">1</span>
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span>
+            <strong>Onboard college &amp; students</strong>
+            <p>Activate the college account, import students, and set institutional rules.</p>
+          </li>
+          <li>
+            <span class="ph-flow-num">2</span>
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+            <strong>Create opportunities</strong>
+            <p>Publish internships, jobs, projects, and campus programs with eligibility filters.</p>
+          </li>
+          <li>
+            <span class="ph-flow-num">3</span>
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <strong>Engage and assess</strong>
+            <p>Run applications, shortlisting, assessments, and drive schedules in one place.</p>
+          </li>
+          <li>
+            <span class="ph-flow-num">4</span>
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></span>
+            <strong>Hire and track</strong>
+            <p>Publish offers, track outcomes, and keep institutional reporting current.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ph-cta">
+      <div class="ph-wrap ph-cta-inner">
+        <div>
+          <h2>Start a pilot at your institution</h2>
+          <p>See PlacementHub in a campus pilot. We are validating with colleges, students, and employers.</p>
+        </div>
+        <div class="ph-cta-actions">
+          <a class="btn btn-primary" href="/contact/">Request a pilot →</a>
+        </div>
       </div>
     </section>
   </main>
@@ -130,7 +186,7 @@
         <a href="/employers/">Employers</a>
         <a href="/resources/">Resources</a>
         <a href="/competition/">Competition</a>
-          <a href="/contact/">Contact</a>
+        <a href="/contact/">Contact</a>
         <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/terms.html">Terms &amp; Conditions</a>

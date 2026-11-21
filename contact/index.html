@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -31,42 +32,62 @@
           <a href="/resources/">Resources</a>
           <a href="/competition/">Competition</a>
           <a href="/contact/" aria-current="page">Contact</a>
-          <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
         </nav>
       </div>
     </div>
   </header>
-  <main id="content">
-    <section class="contact-wrap" aria-labelledby="contact-heading">
-      <div class="contact-card">
-        <h2 id="contact-heading">Contact Us</h2>
-        <p class="lead">Reach PlacementHub Solutions, or tell us a little about your college or organisation.</p>
-        <div class="contact-layout">
-          <address class="contact-details">
-            <p class="org">PlacementHub Solutions</p>
-            <p>Que Spaces, Awfis</p>
-            <p>Magarpatta, Pune – 411028</p>
-            <p>Maharashtra, India</p>
-            <p class="contact-meta"><strong>Phone:</strong> <a href="tel:+917249072620">+91 724 907 2620</a></p>
-            <p><strong>Email:</strong> <a href="mailto:support.placementhub@placementhub.online">support.placementhub@placementhub.online</a></p>
-            <p><strong>Founder:</strong> Sandeep Jain</p>
-            <p><strong>Founder LinkedIn:</strong> <a href="https://www.linkedin.com/in/jain35/" target="_blank" rel="noopener noreferrer">Sandeep Jain</a></p>
-            <p><strong>Company LinkedIn:</strong> <a href="https://www.linkedin.com/company/placementhubonline/" target="_blank" rel="noopener noreferrer">PlacementHub Solutions</a></p>
-          </address>
-          <div>
-            <form id="contact-form" class="contact-form" novalidate>
-              <label>Name <input type="text" name="name" autocomplete="name" required placeholder="Your name" /></label>
-              <label>Email <input type="email" name="email" autocomplete="email" required placeholder="you@college.edu" /></label>
-              <label>Message <textarea name="message" required placeholder="How can we help?"></textarea></label>
-              <button type="submit" class="btn btn-primary">Send message</button>
-            </form>
-            <div id="contact-confirm" class="contact-confirm" role="status" aria-live="polite">
-              <div class="check" aria-hidden="true">✓</div>
-              <h3>Thank you</h3>
-              <p>Your message has been received. We’ll be in touch shortly.</p>
-            </div>
+  <main id="content" class="ph-page">
+    <section class="ph-hero">
+      <div class="ph-hero-inner">
+        <div class="ph-hero-copy">
+          <p class="ph-kicker">Contact</p>
+          <h1>We’d love to hear <span>from you</span></h1>
+          <p class="ph-hero-lead">Reach PlacementHub Solutions in Pune, or tell us a little about your college or organisation. We are validating with campuses and employers right now.</p>
+          <div class="ph-contact-list">
+            <p>
+              <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg></span>
+              <a href="mailto:support.placementhub@placementhub.online">support.placementhub@placementhub.online</a>
+            </p>
+            <p>
+              <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <a href="tel:+917249072620">+91 724 907 2620</a>
+            </p>
+            <p>
+              <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <span style="color:var(--ph-navy);font-weight:600">Que Spaces, Awfis · Magarpatta, Pune – 411028</span>
+            </p>
           </div>
         </div>
+        <div>
+          <form id="contact-form" class="ph-form" novalidate>
+            <label>Name <input type="text" name="name" autocomplete="name" required placeholder="Your name" /></label>
+            <label>Email <input type="email" name="email" autocomplete="email" required placeholder="you@college.edu" /></label>
+            <label>Message <textarea name="message" required placeholder="How can we help?"></textarea></label>
+            <button type="submit" class="btn btn-primary">Send a message →</button>
+          </form>
+          <div id="contact-confirm" class="contact-confirm" role="status" aria-live="polite">
+            <div class="check" aria-hidden="true">✓</div>
+            <h3>Thank you</h3>
+            <p>Your message has been received. We’ll be in touch shortly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-section ph-section--muted">
+      <div class="ph-wrap ph-grid-3">
+        <article class="ph-card">
+          <h3>Colleges</h3>
+          <p>Ask about a campus pilot, TPO workflows, or bringing the competition to your institution.</p>
+        </article>
+        <article class="ph-card">
+          <h3>Employers</h3>
+          <p>Discuss campus hiring, eligibility setup, or joining a pilot with partner colleges.</p>
+        </article>
+        <article class="ph-card">
+          <h3>Students &amp; partners</h3>
+          <p>Questions about resources, the competition, or how PlacementHub works on your campus.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -97,7 +118,7 @@
         <a href="/employers/">Employers</a>
         <a href="/resources/">Resources</a>
         <a href="/competition/">Competition</a>
-          <a href="/contact/">Contact</a>
+        <a href="/contact/">Contact</a>
         <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/terms.html">Terms &amp; Conditions</a>

@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -31,22 +32,40 @@
           <a href="/resources/" aria-current="page">Resources</a>
           <a href="/competition/">Competition</a>
           <a href="/contact/">Contact</a>
-          <a href="https://placementhubsupport-coder.github.io/PlacementHub-AI-Lab/" target="_blank" rel="noopener noreferrer">AI Roadmap</a>
         </nav>
       </div>
     </div>
   </header>
-  <main id="content">
-    <section class="section section-muted" aria-labelledby="resources-heading">
-      <div class="section-wide">
-        <div class="resources-intro">
-          <h2 id="resources-heading">Resources</h2>
-          <p>
-            Download presentation decks and handbooks on cybersecurity, DevOps, CS fundamentals,
-            machine learning, HR, monitoring, project management, and business models—plus take the daily CyberShield quiz.
-            Free materials for students, colleges, and partners.
-          </p>
+  <main id="content" class="ph-page">
+    <section class="ph-hero">
+      <div class="ph-hero-inner">
+        <div class="ph-hero-copy">
+          <p class="ph-kicker">Resources &amp; downloads</p>
+          <h1>Free materials for students, <span>colleges &amp; partners</span></h1>
+          <p class="ph-hero-lead">Presentation decks and handbooks on cybersecurity, DevOps, CS fundamentals, machine learning, HR, project management—plus the daily CyberShield quiz.</p>
+          <div class="ph-hero-actions">
+            <a class="btn btn-primary" href="#resource-library">Browse downloads →</a>
+            <a class="btn btn-secondary" href="https://cybersecurity-quiz-app-2.vercel.app/" target="_blank" rel="noopener noreferrer">Take CyberShield quiz</a>
+          </div>
         </div>
+        <div class="ph-grid-2" style="align-self:stretch">
+          <article class="ph-card ph-card--center">
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+            <h3>Guides &amp; decks</h3>
+            <p>PPTX and PDF downloads across PlacementHub, security, DevOps, CS, and ML.</p>
+          </article>
+          <article class="ph-card ph-card--center">
+            <span class="ph-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span>
+            <h3>Daily quiz</h3>
+            <p>CyberShield awareness quiz Mon–Fri, 10&nbsp;am–4&nbsp;pm, with a live leaderboard.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="ph-section" id="resource-library" aria-labelledby="resources-heading">
+      <div class="ph-wrap">
+        <h2 class="ph-title" id="resources-heading">Resource library</h2>
+        <p class="ph-lead">Filter by category, then download the materials you need.</p>
         <div class="resource-tabs" role="tablist" aria-label="Resource categories">
           <button type="button" class="resource-tab is-active" role="tab" aria-selected="true" data-filter="all">All</button>
           <button type="button" class="resource-tab" role="tab" aria-selected="false" data-filter="placementhub">PlacementHub</button>
@@ -683,8 +702,6 @@
             </div>
           </article>
         </div>
-      </div>
-    
       </div>
     </section>
   </main>
