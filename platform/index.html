@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/site.css" />
-  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/site.css?v=20261121g" />
+  <link rel="stylesheet" href="/css/pages.css?v=20261121g" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -37,7 +37,7 @@
     </div>
   </header>
   <main id="content" class="ph-page">
-    <section class="ph-hero">
+    <section class="ph-hero ph-hero--solo">
       <div class="ph-hero-inner">
         <div class="ph-hero-copy">
           <p class="ph-kicker">Platform &amp; features</p>
@@ -45,12 +45,27 @@
           <p class="ph-hero-lead">From internships and hackathons to drives and offers—every program runs on shared profiles, college policy, and real-time visibility.</p>
           <div class="ph-hero-actions">
             <a class="btn btn-primary" href="/contact/">Request a demo →</a>
-            <a class="btn btn-secondary" href="#features">Explore features</a>
+            <a class="btn btn-secondary" href="#ecosystem">View the ecosystem</a>
           </div>
         </div>
-        <div class="ph-hero-visual">
-          <img src="/images/chart.png" alt="PlacementHub ecosystem diagram" width="960" height="540" fetchpriority="high" />
+      </div>
+    </section>
+
+    <section class="ph-diagram" id="ecosystem" aria-labelledby="ecosystem-heading">
+      <div class="ph-diagram-inner">
+        <div class="ph-diagram-intro">
+          <h2 class="ph-title" id="ecosystem-heading">The PlacementHub ecosystem</h2>
+          <p class="ph-lead">One platform connecting academia, industry, and talent—full width so every stakeholder and capability is readable.</p>
         </div>
+        <figure class="ph-diagram-frame">
+          <img
+            src="/images/chart.png"
+            alt="PlacementHub Ecosystem: Connecting Academia, Industry and Talent for a Future-Ready Workforce"
+            width="1600"
+            height="900"
+            fetchpriority="high"
+          />
+        </figure>
       </div>
     </section>
 
