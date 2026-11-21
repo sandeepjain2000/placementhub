@@ -1415,6 +1415,13 @@
   color: var(--text-primary);
   margin-bottom: 0.2rem;
 }
+.comp-steps a {
+  display: inline-block;
+  margin-top: 0.45rem;
+  color: var(--primary-700);
+  font-weight: 600;
+}
+.comp-steps a:hover { text-decoration: underline; }
 .comp-contact p {
   margin: 0 0 0.4rem;
   font-size: 1.05rem;
