@@ -1384,7 +1384,7 @@
   counter-reset: comp-step;
   border-top: 1px solid var(--border-default);
 }
-.comp-steps li {
+.comp-steps > li {
   counter-increment: comp-step;
   position: relative;
   padding: 1.15rem 0 1.15rem 2.75rem;
@@ -1393,7 +1393,7 @@
   font-size: 1.02rem;
   line-height: 1.65;
 }
-.comp-steps li::before {
+.comp-steps > li::before {
   content: counter(comp-step);
   position: absolute;
   left: 0;
@@ -1423,22 +1423,19 @@
 }
 .comp-steps a:hover { text-decoration: underline; }
 .comp-substeps {
-  margin: 0.75rem 0 0;
-  padding: 0 0 0 1.15rem;
+  margin: 0.4rem 0 0;
+  padding: 0 0 0 1.1rem;
   list-style: decimal;
   color: var(--text-secondary);
-  font-size: 0.98rem;
-  line-height: 1.55;
+  font-size: 0.95rem;
+  line-height: 1.35;
 }
 .comp-substeps li {
-  counter-increment: none;
-  position: static;
-  padding: 0.2rem 0;
+  padding: 0.1rem 0;
+  margin: 0;
   border: none;
-  font-size: inherit;
-  line-height: inherit;
+  list-style: inherit;
 }
-.comp-substeps li::before { content: none; }
 .comp-contact p {
   margin: 0 0 0.4rem;
   font-size: 1.05rem;
