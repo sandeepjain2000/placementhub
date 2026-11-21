@@ -1423,8 +1423,8 @@
 }
 .comp-steps a:hover { text-decoration: underline; }
 .comp-substeps {
-  margin: 0.4rem 0 0;
-  padding: 0 0 0 1.1rem;
+  margin: 0.4rem 0 0 1.25rem;
+  padding: 0 0 0 1.35rem;
   list-style: decimal;
   color: var(--text-secondary);
   font-size: 0.95rem;
@@ -1435,6 +1435,12 @@
   margin: 0;
   border: none;
   list-style: inherit;
+}
+.comp-step-note {
+  margin: 0.65rem 0 0 1.25rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 .comp-contact p {
   margin: 0 0 0.4rem;
