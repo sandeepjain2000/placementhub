@@ -1422,6 +1422,23 @@
   font-weight: 600;
 }
 .comp-steps a:hover { text-decoration: underline; }
+.comp-substeps {
+  margin: 0.75rem 0 0;
+  padding: 0 0 0 1.15rem;
+  list-style: decimal;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+.comp-substeps li {
+  counter-increment: none;
+  position: static;
+  padding: 0.2rem 0;
+  border: none;
+  font-size: inherit;
+  line-height: inherit;
+}
+.comp-substeps li::before { content: none; }
 .comp-contact p {
   margin: 0 0 0.4rem;
   font-size: 1.05rem;
