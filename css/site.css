@@ -945,19 +945,20 @@
 .page-hero--visual .hero-actions {
   justify-content: flex-start;
   align-items: stretch;
-  flex-wrap: nowrap;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  max-width: 52rem;
 }
 .page-hero--visual .hero-actions .btn {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   white-space: nowrap;
   text-align: center;
   line-height: 1.3;
 }
 .page-hero--visual .hero-actions .btn-wide {
-  flex: 1 1 13.5rem;
+  flex: 1 1 14rem;
   min-width: 0;
-  max-width: 16.5rem;
+  max-width: 18rem;
   white-space: normal;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -971,17 +972,18 @@
   background: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 720px) {
-  .page-hero--visual .hero-actions {
-    flex-wrap: wrap;
-  }
   .page-hero--visual .hero-actions .btn,
   .page-hero--visual .hero-actions .btn-wide {
-    flex: 1 1 auto;
+    flex: 1 1 calc(50% - 0.65rem);
     white-space: normal;
     max-width: none;
   }
 }
 .band { padding: 0 var(--content-pad) 4.5rem; }
+.page-hero + .band,
+.page-hero--visual + .band {
+  padding-top: 3.75rem;
+}
 .band-inner { max-width: var(--content-max); width: 100%; margin: 0 auto; }
 .band h2 {
   margin: 0 0 1rem;
