@@ -29,8 +29,6 @@
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--ph-ink);
-  padding-left: 0.75rem;
-  border-left: 3px solid var(--primary-600);
 }
 .ph-lead {
   margin: 0 0 1.75rem;
@@ -128,21 +126,22 @@
   border-radius: 0.65rem;
 }
 
-/* Full-bleed ecosystem diagram */
+/* Full-width ecosystem diagram — own section, not a side pane */
 .ph-diagram {
   background: #fff;
   border-top: 1px solid var(--ph-line);
   border-bottom: 1px solid var(--ph-line);
-  padding: 2.5rem 0 0;
+  padding: 2.75rem 0 0;
 }
 .ph-diagram-inner {
   width: 100%;
+  max-width: none;
   margin: 0;
   padding: 0;
 }
 .ph-diagram-intro {
   max-width: var(--content-max);
-  margin: 0 auto 1.35rem;
+  margin: 0 auto 1.5rem;
   padding: 0 var(--content-pad);
 }
 .ph-diagram-frame {
@@ -152,14 +151,17 @@
   border-radius: 0;
   background: #fff;
   box-shadow: none;
+  width: 100%;
 }
 .ph-diagram-frame img {
   width: 100%;
-  max-width: 100%;
+  max-width: none;
   height: auto;
+  min-height: min(70vh, 52rem);
   display: block;
   border-radius: 0;
   object-fit: contain;
+  object-position: center top;
   background: #fff;
 }
 .ph-hero-panel {

@@ -24,9 +24,10 @@
       --btn-pad-y: 1.05rem;
       --btn-pad-x: 2.1rem;
       --btn-radius: 0.7rem;
-      --badge-pad-y: 0.5rem;
-      --badge-pad-x: 1.15rem;
+      --badge-pad-y: 0.55rem;
+      --badge-pad-x: 1.4rem;
       --media-inset: 0.65rem;
+      --contrast: #1e293b;
     }
 
     * { box-sizing: border-box; }
